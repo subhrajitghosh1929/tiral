@@ -1,0 +1,549 @@
+FILE : CH8EG1
+num=int(input("enter an integer:"))
+if num%2 ==0:
+    print(num,"is even number")
+else:
+    print(num,"is odd number")
+    
+FILE : CH8EG2
+x=y=z=0
+x=float(input("enter first number:"))
+y=float(input("enter second number:"))
+z=float(input("enter third number:"))
+max=x
+if y>max:
+    max=y
+if z>max:
+    max=z
+print("Largest number is ",max)
+
+FILE : CH8EG3
+sum1=sum2=0
+num1=int(input("enter number1:"))
+num2=int(input("enter number2:"))
+num3=int(input("enter number3:"))
+sum1=num1+num2+num3
+if num1==num2:
+    if num3!=num1:
+        sum2+=sum3
+else:
+    if num1==num3:
+        sum2+=num2
+    else:
+        if num1==num3:
+         sum2+=num2
+        else:
+           if num2==num3:
+            sum2+=num1
+           else:
+               sum2+=num1+num2+num3
+print("number are",num1,num2,num3)
+print("sum of three given number is",sum1)
+print("sum of non duplicated number is",sum2)
+print()
+print("OR")
+print()
+num1=int(input("enter number1:"))
+num2=int(input("enter number2:"))
+num3=int(input("enter number3:"))
+sum1=num1+num2+num3
+sum2=0
+if num1!= num2 and num1!= num3:
+    sum2+=num1
+if num2!= num1 and num2!= num3:
+    sum2+=num2
+if num3!= num1 and num3!= num2:
+    sum2+=num3
+print("number are",num1,num2,num3)
+print("sum of three given number is",sum1)
+print("sum of non duplicated number is",sum2)
+print()
+
+FILE : CH8EG4
+
+num1=int(input(" enter the dividend "))
+num2=int(input(" enter the divisor "))
+if num1%num2==0:
+    print(num1, " is divisible by ", num2 )
+else:
+    print(num1, " is not divisible by ", num2 )
+
+FILE : CH8EG5
+print("enter five number below")
+num1=float(input("first number:"))
+num2=float(input("second number:"))
+num3=float(input("third number:"))
+num4=float(input("fourth number:"))
+num5=float(input("fifth number:"))
+divisor=float(input("enter the divisor number:"))
+count=0
+print("multiple of", divisor,"are:")
+remainder=num1%divisor
+if remainder==0:
+    print(num1,sep=" ")
+    count+=1
+remainder=num2%divisor
+if remainder==0:
+    print(num2,sep=" ")
+    count+=1
+remainder=num3%divisor
+if remainder==0:
+    print(num3,sep=" ")
+    count+=1
+remainder=num4%divisor
+if remainder==0:
+    print(num4,sep=" ")
+    count+=1
+remainder=num5%divisor
+if remainder==0:
+    print(num5,sep=" ")
+    count+=1
+print()
+print(count,"multiples of",divisor,"found")
+
+FILE : CH8EG6
+# menu driven program 
+radius=float(input("enter radius  of the circle :"))
+print("1.calculate Area")       # menu1
+print("2.calculate perimeter(circumference)")  # menu2
+c=int (input("enter your choise(1 or 2):"))    # menu choice
+if c==1:
+    area=3.14159*radius*radius
+    print("area of circle with radius",radius,'is',area)
+elif c==2:
+    perm=2*314159*radius
+    print("circumference of circle with radius",radius,'is',perm)
+else:
+    print("Wrong choice entered")
+
+FILE : CH8EG7
+
+sale=int(input("enter the amount of monthly sell: "))
+if sale>=30000:
+    discount=sale*0.18
+elif sale>=20000:
+    discount=sale*0.15
+elif sale>=10000:
+    discount=sale*0.10
+else:
+    discount=sale*0.05
+print("discount sale:",discount)
+
+FILE : CH8EG8
+
+x=int(input("enter first number:"))
+y=int(input("enter second number:"))
+z=int(input("enter third number:"))
+min=mid=max=None
+if x<y and x<z:
+    if y<z:
+        min,mid,max=x,y,z
+    else:
+       min,mid,max=x,z,y
+elif y<x and y<z:
+    if x<z:
+        min,mid,max=y,x,z
+    else:
+       min,mid,max=y,z,x
+else:
+    if x<y:
+        min,mid,max=z,x,y
+    else:
+       min,mid,max=z,y,x
+print("number in ascding order:",min,mid,max)
+       
+
+
+FILE : CH8EG9
+
+ch=input("enter a single character: ")
+if ch>='A' and ch<='Z':
+    print(" It is a capital letter")
+elif ch>='a' and ch<='z':
+    print(" It is a small letter")
+elif ch>='0' and ch<='9':
+    print(" It is a digit")
+elif ch==' ' :
+    print(" It is a space ")
+else:
+    print("It is a special character")
+
+
+FILE : CH8EG10
+
+import math
+a=int(input("Enter a: "))
+b=int(input("Enter b: "))
+c=int(input("Enter c: "))
+if a==0:
+    print("value of a",a,'should not be zero')
+    print("\n Aborting!!!")
+else:
+    delta=b*b-4*a*c
+    if delta>0:
+        root1=(-b+math.sqrt(delta))/(2*a)
+        root2=(-b-math.sqrt(delta))/(2*a)
+        print("Roots are REAL and UNEQUAL")
+        print("Root1=",root1,",Root2=",root2)
+    elif delta==0:
+        root1=-b/(2*a)
+        print("Roots are REAL and UNEQUAL")
+        print("Root1=",root1,",Root2=",root1)
+    else:
+        print("Root are COMPLEX AND IMAGINARY")
+
+
+ FILE : CH8EG11
+
+d=int(input("Enter deposit: "))
+t=int(input("Enter time: "))
+    # NAMING/assigning OF CONDITIONS to variables
+ef5p= d<2000 and t>=2
+    # when deposit is less than Rs. 2000 and for 2 years or more at 5%/a
+ef7p= 2000>=d <=6000 and t>=2
+    # when deposit is Rs. 2000 or more than but less than equal to 6000 and for 2 years or more at 7%/a
+ef8p= d>= 6000 and t>=1
+    # when deposit is more than Rs. 6000 and for 1 years or more at 8%/a
+ef10p= t>=5
+    # when all deposit for 5 years or more at 10%/a
+if ef5p:        # means ef5p == True
+    r=5
+elif ef7p:        # means ef7p == True
+    r=7
+elif ef8p:        # means ef8p == True
+    r=8
+elif ef10p:        # means ef10p == True
+    r=10
+else:
+    r=0
+si=d*t*r/100
+print("si = ",si)
+
+ FILE : CH8EG12
+
+print(3 in [1,2,3,4])
+print(5 in [1,2,3,4])
+print(5 not in [1,2,3,4])
+print('a'in "trade")
+print('ash'in "trash")
+
+
+
+
+
+
+FILE : CH8EG13
+
+#1
+print()
+print("#1")
+l=int(input ("Enter the lower limit "))
+u=int(input ("Enter the upper limit "))
+s=int(input ("Enter the step value "))
+for a in range(l,u,s):       # list given by range  
+    print(a,end=" ")
+print()
+
+#2
+print()
+print("#2")
+for a in range(10):       # list given by range  
+    print(a,end=" ")
+print()
+
+FILE : CH8EG14
+#1
+print()
+print("#1")
+for a in [1,4,7]:       # list 
+    print(a,end=",")
+    print(a*a,end=" \t")
+#2
+print();print("#2")
+for a in range(1,5):       # list given by range  
+    print(a,end=",")
+    print(a*a,end=" \t")
+#3
+print();print("#3")
+for a in range(5,1,-1):       # list given by range  
+    print(a,end=",")
+    print(a*a,end=" \t")
+
+#4
+print()
+print("#4")
+for a in range(12,18):       # list given by range  
+    print(a,end=",")
+    print(a*a,end=" \t")
+print()
+
+#5
+print()
+print("#5")
+for ch in 'calm':
+    print(ch,end=",")
+
+FILE : CH8EG15
+
+num=int(input("enter a value "))
+for a in range (1,21):
+    print(num,'x',a,'=',num*a)
+
+FILE : CH8EG16
+
+sum=0
+for n in range(11,101):
+    sum+=n
+    print("sum of natural <=",n,"is",sum)
+
+FILE : CH8EG17
+
+sum=0
+l=int(input("enter the value1 :"))
+u=int(input("enter the value2 :"))
+for n in range(l,u):
+    sum+=n
+print("sum of natural <=",n,"is",sum)
+
+
+
+FILE : CH8EG18
+
+a=5
+while a>0:
+    print("hello",a)
+    a =a-3
+print ("loop over!!!")
+
+FILE : CH8EG19
+
+#1
+print()
+print("#1")
+n=1
+while n<5:
+    print("square of",n,'is',n*n)
+    n+=1
+print("Thank you")
+
+#2
+print()
+print("#2")
+n=5
+while n>1:
+    print("square of",n,'is',n*n)
+    n-=1
+print("Thank you")
+
+FILE : CH8EG20
+
+n=int(input("enter a number:"))
+a=1;fact=1
+while a<=n:
+    fact*=a
+    a+=1
+print("the factorial of",n,"is",fact)
+
+
+
+FILE : CH8EG21
+
+n=int(input("up to which natural number? "))
+ctr=1;sum_even=sum_odd=0
+while ctr<=n:
+    if ctr%2==0:
+        sum_even+=ctr
+    else:
+        sum_odd+=ctr
+    ctr+=1
+print("the sum of even integers is",sum_even)
+print("the sum of odd integers is",sum_odd)
+
+FILE : CH8EG22
+
+a=b=c=0
+for i in range(1,5):
+    a=int(input("enter the number1 :"))
+    b=int(input("enter the number2 :"))
+    if b==0:
+        print("divisor by zero error! abortion! ")
+        break
+    else:
+        c=a//b
+        print("Question=",c)
+print("program over! ")
+
+FILE : CH8EG23
+# gussing game
+import random
+n=random.randint(10,50)
+ctr=0
+print("guess a number in range 10..50 :")
+while ctr<5:
+    print("trial number : ",ctr+1)
+    guess= int(input("guess your number :"))
+    if guess==n:
+        print("you win!!:)",n)
+        break
+    elif n-5<guess and guess<n+5 :
+        print("you are near ")
+    else:
+        print("wild guess ")
+    ctr+=1
+if not ctr <5:	   # OR ctr>=5:  'this if is part of while loop
+    print("you lose:(\n the number was",n)
+
+FILE : CH8EG24
+
+#1
+print()
+print("#1")
+a=2
+while True:         #while True;    (boolean literal) creates an infinite loop
+    print(a)
+    a*=2
+    if a>100:       # to break the infinite looping 
+        break
+
+#2
+print()
+print("#2")
+fr i in range(1,5):
+    print("enter two numbers")
+    a=int(input("enter the number 1 :"))
+    b=int(input("enter the number 2 :"))
+    if b==0:
+        print("\n the denominator cannot be zero . enter again!")
+        continue
+    c=a//b
+    print("Question=",c)
+
+
+
+
+
+
+
+FILE : CH8EG25
+
+print("the loop with 'break' produce output as:")
+for i in range(1,11):
+    if i%3==0:
+      break
+    else:
+        print(i)
+print("the loop'continue'produces output as:")
+for i in range (1,11):
+    if i%3==0:
+     continue
+    else:
+        print(i)
+
+FILE : CH8EG26
+#1
+print("#1")
+for a in range(1,4):
+ if a%2==0:
+    break
+ print("Element is ",end=' ')
+ print(a)
+else:
+    print("ending loop after printing all elements of sequence")
+#2
+print();print("#2")
+for a in range(1,4):
+    print("Element is ",end=' ')
+    print(a)
+    if a%2==0:
+        break
+    else:
+        print("ending loop after printing all elements of sequence")
+
+
+
+
+
+#3
+print("#3")
+count=sum=0
+ans='y'
+while ans=='y':
+    num=int(input("enter the number :"))
+    if num<0:
+        print("number entered is below zero. Aborting!")
+        break
+    sum=sum+num
+    count=count+1
+    ans=input("want to enter more number? (y/n)")
+else:
+    print("you entered",count,"number so far")
+print("sum of number entered is",sum)
+
+FILE : CH8EG27
+
+num=int(input("enter number : "))
+lim=int(num/2)+1
+for i in range(2,lim):
+    rem=num%i
+    if rem==0:
+        print(num,"is not a prime number ")
+        break
+    else:
+        print(num,"is a prime number")
+
+FILE : CH8EG28
+#1
+print()
+print("#1") 
+while(3>4):             # 3<4 it will create infinite loop
+    print("in loop")        
+else:                   # 3>4 it will not execute the loop even once 
+    print("exiting from while loop")
+
+
+#2
+print()
+print("#2")
+for a in range (10,1,-1):
+    print("in loop",a)
+else:                   # else works after normal termination of for loop
+    print("exiting from for loop")
+#3
+print()
+print("#3")
+for i  in range (1,6):
+    for j in range (1,i):
+        print("*",end=" ")
+    print()
+#4
+print()
+print("#4")
+for outer  in range (5,10,4):
+    for inner in range (1,outer,2):
+        print(outer, inner)
+    print()
+#5
+print()
+print("#5")
+for a in range (3):
+    for b in range (5,7):
+        print("for a=",a,"b is now",b)
+    print()
+FILE : CH8EG29
+#1
+print("#1")
+for a in range (3):
+    for b in range (5,7):
+        print ("*",end='')
+    print()
+
+#2
+print("#2")
+for num in range (15,25):
+    for i in range (2,num):
+        if num%1==0:
+            j=num/i
+            print("founded a factori(",i,")for",num)
+            break
+        else:
+            print(num,"is a prime number")

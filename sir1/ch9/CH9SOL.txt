@@ -1,0 +1,345 @@
+FILE : CH9SOL1
+
+string=input("Enter the string: ")
+length=len(string)
+a=0
+string2=''
+while a <length:
+    if a==0:
+        string2+=string[0].upper()
+        a+=1
+    elif string[a]==' ' and string[a+1]!='':
+        string2+=string[a]
+        string2+=string[a+1].upper()
+        a+=2
+    else:
+        string2+=string[a]
+        a+=1
+print("original string:",string)
+print("capitalized word string:",string2)
+
+FILE : CH9SOL1A
+
+string=input("Enter the string: ")
+string=" "+string.strip()
+a=0
+string2=''
+while a <len(string):
+    if string[a]==' ' and string[a+1]!='':
+        string2+=string[a]+string[a+1].upper()
+        a+=1
+    else:
+        string2+=string[a]
+    a+=1
+print("original string:",string)
+print("capitalized word string:",string2)
+
+
+
+
+FILE : CH9SOL1B
+
+string=input("Enter the string: ")
+string=" "+string.strip()
+a=0
+string2=''
+for a in range(0,len(string),1):
+    if string[a]==' ' and string[a+1]!='':
+        string2+=string[a]+string[a+1].upper()
+    elif a!=0 and string[a-1]==' ' and string[a]!='':
+        string2+=''
+    else:
+        string2+= string[a]
+print("original string:",string)
+print("capitalized word string:",string2)
+
+FILE : CH9SOL1C
+
+string=input("Enter the string: ")
+string=" "+string.strip()
+a=0
+string2=''
+for a in range(len(string)):
+    if string[a]==' ' and string[a+1]!='':
+        string2+=string[a]+string[a+1].upper()
+    elif a!=0 and string[a-1]==' ' and string[a]!='':
+        continue  
+    else:
+        string2+= string[a]
+print("original string:",string)
+print("capitalized word string:",string2)
+
+FILE : CH9SOL1D
+
+string=input("Enter the string: ")
+print("original string:",string)
+print("capitalized word string:",string.title())
+
+
+FILE : CH9SOL2
+
+string=input("enter a string:")
+length=len(string)
+mid=length//2
+rev=-1
+for a in range(mid):
+    if string[a]==string[rev]:
+        a+=1
+        rev-=1
+    else:
+        print(string,"is not a palidrome")
+        break
+else:
+    print(string,"is a palidrome")
+
+FILE : CH9SOL2A
+
+string=input("enter a string:")
+length=len(string)
+mid=length//2
+rev=-1
+a=0
+while a <= mid:
+    if string[a]==string[rev]:
+        a+=1
+        rev-=1
+    else:
+        print(string,"is not a palidrome")
+        break
+else:
+    print(string,"is a palidrome")
+
+
+
+
+
+
+
+FILE : CH9SOL3
+
+string=input("enter the string:")
+length=len(string)
+maxlength=0
+maxsub=''
+sub=''
+lensub=0
+for a in range(length):
+    if string[a] in'aeiou' or string[a] in 'AEIOU':
+        if lensub>=maxlength:
+            maxsub=sub
+            maxlength=lensub
+            sub=''
+            lensub=0
+    else:
+        sub+=string[a]
+        lensub=len(sub)
+    a+=1
+print("maximum length consonant substring is:",maxsub,end='')
+print(" with",maxlength,"character")
+    
+FILE : CH9SOL3A
+
+str = input("Enter the string: ")
+for ch in range(len(str)-1,-1,-1) :
+    print(str[ch],end='')
+
+FILE : CH9SOL4
+
+string=input("enter a string: ")
+length=len(string)
+print("original string :",string)
+string2=""
+for a in range(0,length,2):
+    string2+=string[a]
+    if a<(length-1):
+        string2+=string[a+1].upper()
+print("Alternatively capitalised string:",string2)
+
+FILE : CH9SOL4A
+
+string=input("enter a string: ")
+length=len(string)
+print("original string :",string)
+string2=""
+for a in range(0,length,2):
+    string2+=string[a]+string[a+1].upper()
+print("Alternatively capitalised string:",string2)
+
+FILE : CH9SOL4B
+
+string=input("enter a string: ")
+length=len(string)
+print("original string :",string)
+string2=""
+for a in range(0,length,2):
+    string2+=string[a].upper()+string[a+1]
+print("Alternatively capitalised string:",string2)
+
+FILE : CH9SOL5
+
+email=input("Enter your email id:")
+domain='@edupillar.com'
+ledo=len(domain)
+lema=len(email)
+sub=email[lema-ledo:]
+if sub==domain:
+    if ledo !=lema:
+        print("It is valid  email id")
+    else:
+        print("this is invalid email id - contains just domain name")
+else:
+    print("this email id is not valid or belong to some other domain  ")
+
+
+
+
+FILE : CH9SOL6
+
+s=input("enter some text:")
+c=input("enter a character:")
+print("in",s,"character",c,"found at this location:",end="")
+for i in range(len(s)):
+    if s[i]==c: print(i,end=",")
+
+FILE : CH9SOL7
+
+s=input('enter a string:')
+ds=""
+for c in s:
+    ds=ds+c*2
+print("original string",s)
+print("double string",ds)
+
+FILE : CH9SOL8
+
+s1=input("enter string1:")
+s2=input("enter string2:")
+print("original string:",s1,s2)
+s3=""
+if s1 in s2:
+    s3=s2[:4]+"Restore"
+print(" final string : ",s1,s3)
+
+FILE : CH9SOL9
+
+dna_seq=input('enter DNA string')
+Dseq=dna_seq.upper()
+print("Codon1",Dseq[0:3])
+print("Codon2",Dseq[3:6])
+print("Codon3",Dseq[6:9])
+
+
+
+FILE : CH9SOL10
+
+s=input("enter a line of text:")
+count=0
+for word in s.split():
+    print(word)
+    count+=1
+print("Total word:",count)
+
+FILE : CH9SOL11
+
+str1=input("enter a string")
+uc,lc=0,0
+for ch in str1:
+    if ch>='A' and ch<'Z':
+        uc+=1
+    if ch>='a' and ch<'z':
+        lc+=1
+print("no.of uppercase letter",uc)
+print("no.of lowercase letter",lc)
+
+FILE : CH9SOL11A
+
+str1=input("enter a string")
+uc,lc=0,0
+for ch in str1:
+    if ord(ch)>=65 and ord(ch)<91:
+        uc+=1
+    if ord(ch)>=97 and ord(ch)<123:
+        lc+=1
+print("no.of capital letter",uc)
+print("no.of small letter",lc)
+
+FILE : CH9SOL12
+
+strg=input("Enter a string:")
+stlst=strg.split()
+for word in stlst:
+    print(word,"(",len(word),")")
+
+FILE : CH9SOL12A
+
+strg=input("Enter a string:")
+stlst=strg.split(' ')
+for word in stlst:
+    print(word,"(",len(word),")")
+
+FILE : CH9SOL13
+
+s=input("enter a string:")
+test=False
+dig="0123456789"
+for ch in s:
+    if ch in dig:
+        print("the string contain a digit")
+        test=True
+        break
+else:
+    test==False
+    print("the string doesn't contain a digit")
+
+FILE : CH9SOL13A
+
+s=input("enter a string:")
+test=False
+dig="0123456789"
+for ch in s:
+    if ch in dig:
+        print("the string contain a digit")
+        test=True
+        break
+if test==False:
+    print("the string doesn't contain a digit")
+
+
+
+
+
+FILE : CH9SOL14
+
+add=input("enter text :")
+i=0
+ln=len(add)
+while i <ln:
+    ch=add[i]
+    if ch.isdigit():
+        sub=add[i:(i+6)]
+        if sub.isdigit():
+            print(sub)
+            break
+    i+=1
+
+FILE : CH9SOL15
+
+s=input("Enter the string: ")
+c=input("Enter a character: ")
+print("string with delete character is:")
+print(s.replace(c,''))
+
+FILE : CH9SOL16
+
+s=input("Enter the string: ")
+print("string with delete character is:")
+print(s.replace('a','-'))
+
+FILE : CH9SOL17
+
+s=input("Enter the string: ")
+dsum=0
+for a in s:
+    if a.isdigit():
+        dsum+=int(a)
+print("sum of string digits is",dsum)

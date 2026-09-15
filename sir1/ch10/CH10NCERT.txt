@@ -1,0 +1,68 @@
+FILE : CH10NCERT1
+
+val=eval(input("enter a list :"))
+item=int(input("enter a item to be searched :"))
+print(item," occurs in the list ",val.count(item)," times.")
+
+FILE : CH10NCERT2
+
+val=eval(input("enter a list :"))
+plist=[]
+nlist=[]
+c=0
+for i in range (len(val)):
+    if val[i] < 0 :
+        nlist.append(val[i])
+    elif val[i] > 0 :
+        plist.append(val[i])
+    else:
+        c+=1
+print("the original list is ",val)
+print("the +ive list is ",plist)
+print("the -ive list is ",nlist)
+print("the no. of zeroes in the list is ",c)
+
+FILE : CH10NCERT5
+
+import statistics as st
+val=eval(input("enter a list :"))
+m=st.median(val)
+print("median of the given list is :",m)
+
+
+
+
+
+
+
+
+
+FILE : CH10NCERT5A
+
+val1=eval(input("enter a list :"))
+val1.sort()
+print(val1)
+s=len(val1)
+mid=s//2
+print(mid)
+if s%2==0:
+     med= val1[mid]
+     print("med of the given list is :",med)
+else:
+    m1,m2=mid,mid+1
+    med=(val1[m1]+val1[m2])/2
+    print("median of the given list is :",med)
+
+FILE : CH10NCERT6
+
+val=eval(input("enter a list :"))
+t=[]
+print("the original list is ",val)
+for i in val:
+    if i not in t :
+        t.append(i)
+val=list(t)
+print("list after removing dupicate: ",val)
+
+
+

@@ -1,0 +1,5 @@
+tp11=(1,3,5)
+tp12=(6,7,8)
+print(tp11+tp12)
+print(tp11+(3,))
+print(tp11*3)

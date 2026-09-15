@@ -1,0 +1,5 @@
+myfile=open(r'poem.txt',"r")
+str=myfile.read()
+size=len(str)
+print("size of the given text poem.txt is")
+print(size,"bytes")

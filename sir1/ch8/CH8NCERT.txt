@@ -1,0 +1,235 @@
+FILE : CH8
+
+#1
+for r in range (0,11,1):
+ print (r)
+#2
+print()
+print("#2")
+s=0
+for r in range (0,11,1):
+ s=s+2
+ print (s)
+
+#3
+print()
+print("#3")
+for i in range (1,5,1):
+    for j in range (1,i+1,1):
+        print("*",end=" ")
+    print()
+#4
+print()
+print("#4")
+for i in range (5,0,-1):
+    for j in range (1,i+1,1):
+        print("*",end=" ")
+    print()
+
+#5
+print();print("#5")
+s=1
+for r in range (1,4):
+    k=s
+    for c in range (1,6):
+        print(k,end=" ")
+        k=k+2
+        print()
+    s=s+1
+    print()
+        
+FILE : NCERT1
+
+name=input("enter name :")
+age=int(input("enter age :"))
+if age>=18:
+    print(name,"is eligible for a driving licence :")
+else:
+    print(name,"is not eligible for a driving licence :")
+
+FILE : NCERT2
+
+n=int(input("enter number :"))
+for i in range(1,11):
+    print (n,"x",i,"=",(n*i))
+
+
+
+
+FILE : NCERT3
+
+for i in range(5):
+    n=int(input("Enter number: "))
+    if i == 0:
+        small = n
+    elif n< small:
+        small=n
+    if i == 0:
+        lar = n
+    elif n> lar:
+        lar=n
+print("The lowest number is: ",small)
+print("The largest number is: ",lar)
+
+FILE : NCERT4
+
+yr=int(input("enter a 4-digit number :"))
+if yr % 100==0:
+    if yr % 400==0:
+        leap=True
+    else:
+        leap=False
+elif yr%4==0:
+    leap=True
+else:
+    leap=False
+if leap==True:
+    print(yr,"is a leap years")
+else:
+    print(yr,"is not a leap years")
+        
+FILE : NCERT5
+
+n=int(input("enter list: "))
+sign=-1
+for  i in range(5,n,5):
+    term=i*sign
+    sign=sign*-1
+    print(term,end=" ")
+
+FILE : NCERT6
+
+n=int(input("enter limit :"))
+ssum=0
+print("1",end=" ")
+ssum+=1
+for i in range(2,(n+1)):
+    icube=(i*i*i)
+    term=1/icube
+    ssum+=term
+    print("+1/",icube,end=" ")
+print("=",ssum)
+
+
+
+
+
+
+FILE : NCERT7
+
+num=int(input("enter the number "))
+ssum=0
+nnum=num
+while (nnum!=0):
+    digit=nnum%10
+    nnum=nnum//10
+    ssum+=digit
+print("sum of digital of number",num,"is:",ssum)
+
+FILE : NCERT8
+
+num=int(input("enter a number "))
+rev=0
+nnum=num
+while(nnum !=0):
+    digit = nnum%10;
+    nnum=nnum//10
+    rev=rev*10+digit
+if rev == num:
+    print(num,"is a palindrome number ")
+else:
+    print(num,"is not a palindrome number ")
+
+FILE : NCERT9
+
+n=5
+k=round(n/2)*2
+for i in range(0,n,2):
+    for j in range (0,k+1):
+        print(end=" ")
+    for j in range (0,i+1):
+        print("*",end="")
+    print()
+    k=k-1       
+
+    
+
+k=2
+for i in range(n-1,0,-2):
+    for j in range(0,k+2):
+        print(end=" ")
+    for j in range(0,i-1):
+        print("*",end="")
+    k=k+1
+    print() 
+
+FILE : NCERT9A
+
+n=int(input("enter the N.O. of rows"))
+for i in range(0,n):
+    for j in range (0,i+1):
+        print("*",end="")
+    print()
+              
+for i in range(n,0,-1):
+    for j in range(0,i-1):
+        print("*",end="")
+    print() 
+
+FILE : NCERT10
+
+n=5
+s=n*2-1
+for i in range (1,n+1):
+    for j in range(0,s):
+        print(end=" ")
+    for j in range(i,0,-1):
+        print(j,end=" ")
+    for j in range(2,i+1):
+        print(j,end=" ")
+    s=s-2
+    print()
+
+
+
+
+FILE : NCERT10C
+
+n=int(input("enter the no of rows :"))
+k=2
+for i in range(n,0,-1):
+    for j in range(1,k+2):
+        print(end=" ")
+    for j in range(1,i+1):
+        print(j,end="")
+    k=k+1
+    print() 
+
+FILE : NCERT10D
+
+n=3
+j=n-1
+print(' '*n+'*')
+for i in range(1,2*n):
+    if i>n:
+        print(' '*(i-n)+'*'+' '*(2*j-1)+'*')
+        j-=1
+    else:
+        print(' '*(n-i)+'*'+' '*(2*i-1)+'*')
+if n>1:
+    print(' '*n+'*')
+
+FILE : NCERT11
+marks= float(input("enter marks:"))
+if marks >=90:
+    grade='A'
+elif marks >=80:
+    grade='B'
+elif marks >=70:
+    grade='C'
+elif marks >=60:
+    grade='D'
+else:
+    grade='1E'
+print("for marks",marks,"the grade is",grade)
+

@@ -1,0 +1,6 @@
+myfile=open('poem.txt',"r")
+s=myfile.readlines()
+print(s)
+linecount=len(s)
+print("number of lines in poem.txt is",linecount,end="")
+myfile.close()

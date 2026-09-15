@@ -1,0 +1,478 @@
+FILE : CH8SOL1
+if (4+5==10):
+    print("true")
+else:
+    print("False")
+print("True")
+
+FILE : CH8SOL2
+name=""
+while True :    # while True:(boolean literal) creates an infinite loop  
+    name=input("enter name('end' to exit):")
+    if name == "end":       # to break the infinite looping 
+        break
+    print("Hello",name)
+else:
+    print("wasn't it fun ? ")
+#2
+print()
+print("#2")
+name=""
+while name != "end": 
+    name=input("enter name('end' to exit):")
+    if name == "end":
+        pass
+    print("Hello",name)
+else:
+    print("wasn't it fun ? ")
+#3
+print()
+print("#3")
+name=""
+while 5 : #while 5: creates infinite loop for any non zero value
+    name=input("enter name('end' to exit):")
+    if name == "end":       # to break the infinite looping 
+        break
+    print("Hello",name)
+else:
+    print("wasn't it fun ? ")
+
+FILE : CH8SOL3
+
+N =int(input('enter number: '))
+sum=0
+i=1
+while i<=N :
+    sum=sum+i
+    i=i+2
+print(sum)
+
+FILE : CH8SOL4
+
+N=int(input("Enter N: "))
+i=1
+sum=0
+while i< N:
+    if i%2==0:
+        sum=sum+i
+    i=i+1
+print(sum)
+
+FILE : CH8SOL4A
+
+number= int(input("enter number:"))
+n,result = number,1
+while True or  n:
+    result = result *n
+    n=n-1
+print("factorial of",number,"is",result)
+
+FILE : CH8SOL5
+
+# to find the largest among 3 numbers
+
+num1=float(input("Enter 1st number: "))
+num2=float(input("Enter 2nd number: "))
+num3=float(input("Enter 3rd number: "))
+
+if (num1 > num2) and(num1 > num3):
+    largest=num1
+elif (num2 > num1) and(num2 > num3):
+    largest=num2
+else:
+    largest=num3
+print("largest number is: ",largest)
+if (num1 < num2) and(num1 < num3):
+    smallest=num1
+elif (num2 < num1) and(num2 < num3):
+    smallest=num2
+else:
+    smallest=num3
+print("smallest among 3 numbers is : ",smallest)
+FILE : CH8SOL6
+# to break up a 6 digit into 3 two digit numbers
+num=int(input("Enter 6 digit number: "))
+if num<100000 or num>999999:
+    print("please enter 6 digit: ")
+else:
+    n1=num%100          # last 2 digits of the number
+    int1=num//100
+    n2=int1%100         # middle 2 digits of the number
+    int2=int1//100
+    n3=int2%100         # first 2 digits of the number
+    print("Three 2-digit number are",n3,n2,n1)    
+print();print("#2")
+# to find the first, middle and last digit of a number
+import math
+num=int(input("Enter a number: "))
+if len(str(num))%2 == 0:
+    print("please enter odd number of digits : ")
+else:
+    n1=num%10          # last digit of the number
+    n2=str(num)[len(str(num))//2]   #middle  digit of the number
+    n3=num//pow(10,len(str(num))-1)  # first digit of the number
+    print("first digit is :",n3)
+    print("middle digit is : " ,n2)
+    print("last digit is :",n1)
+
+FILE : CH8SOL7
+
+import math
+num=int(input("Enter number: "))
+ln= len(str(num))
+lst=num%10
+fst=num// math.pow(10,ln-1)
+print("length of given number",num,"is",ln)
+print("The first digit is",fst)
+print("The last digit is",lst)
+print("first digit rising to the length:",\
+math.pow(fst,ln))
+print("last digit rising to the length:",\
+math.pow(lst,ln))
+
+FILE : CH8SOL8
+
+small=smallest=0
+for i in range(5):
+    n=int(input("Enter number: "))
+    if i == 0:
+        small = n
+    elif i == 1:
+        if n<= small:
+            smaller =n
+        else:
+            smaller= small
+            small=n
+    else:
+        if n < smaller:
+            small= smaller
+            smaller=n
+        elif n< small:
+            small=n
+print("The lowest number is: ",smaller)
+print("The second lowest number is: ",small)
+
+
+FILE : CH8SOL8A
+
+# to print lowest and 2nd lowest no.
+
+small=smallest=0
+for i in range(5):
+    n=int(input("Enter number: "))
+    if i == 0:
+        small = n
+    elif n< small:
+        small=n
+for i in range(5):
+    n=int(input("Enter number: "))
+    if n< small:
+        pass
+    else:
+        small=n"""
+print("The lowest number is: ",small)
+#print("The second lowest number is: ",small)
+
+
+FILE : CH8SOL8B
+
+# to print lowest, 2nd lowest, largest and 2nd largest nos.
+small=smallest=0
+for i in range(5):
+    n=int(input("Enter number: "))
+    if i == 0:
+        small = n
+        s2=n
+    elif n< small:
+        s2=small
+        small=n
+    if i == 0:
+        lar = n
+        l2=n
+    elif n> lar:
+        l2=lar
+        lar=n
+print("The lowest number is: ",small)
+print("The second lowest number is: ",s2)
+print("The largest number is: ",lar)
+print("The second largest number is: ",l2)
+
+FILE : CH8SOL9
+
+import random
+secretNum= random.randint(1,100)
+guessNumString=int(input("Guess a number between 1 and 100 inclusive: "))
+while guessNumString !=secretNum:
+    if guessNumString<secretNum:
+        print("your guess is too low")
+    else:
+        print("your guess is too high")
+    guessNum=int(input("Guess a number between 1 and 100 inclusive: "))
+print("congratulation ! You guess the correct number")
+        
+FILE : CH8SOL10
+
+first=0; second=1
+print(first); print(second)
+for a in range(1,19):
+    third=first+second
+    print(a+2,"   ",third)
+    first,second=second,third
+
+FILE : CH8SOL11
+
+num=int(input("enter an integer(>1000)  the last digit must not be 0 :")) 
+tnum= num; reverse=0
+while tnum:
+    digit = tnum%10
+    tnum=int(tnum/10)
+    reverse= reverse*10+digit
+print("Reverse  of",num,"is",reverse)
+    
+FILE : CH8SOL11A
+
+num=int(input("enter an integer(>1000): "))
+tnum= num
+reverse=0
+for i in range(tnum,0,-1) :
+    digit = tnum%10
+    print(digit)
+    tnum=int(tnum/10)
+    reverse= reverse*10+digit
+print("Reverse  of",num,"is",reverse)
+    
+
+FILE : CH8SOL12
+
+num=int(input("Enter an intger: "))
+mid=num//2
+print("the factor of  ", num," other than 1 and itself are:" )
+for a in range(2,mid+1):
+    if num%a==0:
+        print(a,end=' ')
+else:
+    print("-End-")
+
+FILE : CH8SOL13
+
+angle1=angle2=angle3=0
+angle1=float(input("enter angle1: "))
+angle2=float(input("enter angle2: "))
+angle3=float(input("enter angle3: "))
+if (angle1+angle2+angle3)==180:
+    print("angle form a triangle")
+else:
+    print("angle do not form a triangle")
+
+
+
+
+FILE : CH8SOL14
+
+x=int(input("enter a positive number: "))
+n=int(input("enter a power(n): "))
+power=1
+for r in range(n):
+    power=power*x
+print(x,"to the power",n,"is",power)
+
+FILE : CH8SOL15
+
+num=int(input("enter a number:"))
+fac=1
+for i in range(num,0,-2):
+    fac*=i
+print(num,"!! is :",fac)
+
+FILE : CH8SOL16
+
+print("first 10 mersenne number are: ")
+for a in range(1,11):
+    mersnum=2**a-1
+    print(mersnum, end=" ")
+print()
+
+FILE : CH8SOL17
+
+for a in range(3,10,2):
+    for b in range(1,a,2):
+        print(b,end='')
+    print()
+
+
+
+
+
+
+
+
+FILE : CH8SOL18
+
+for a in range(1,21):
+    mersnum=2**a-1
+    mid=int(mersnum/2)
+    for b in range(2,mid):
+        if mersnum % b ==0:
+            print(mersnum)
+            break
+    else:
+        print(mersnum,"\tprime")
+
+FILE : CH8SOL19
+
+weight_in_kg=float(input("enter weight in Kg: "))
+height_in_meter=float(input("enter height in meter: "))
+bmi=weight_in_kg/(height_in_meter*height_in_meter)
+print("BMI is :",bmi,end=" ")
+if bmi <18.5:
+    print("...under weight")
+elif bmi<25:
+    print("...normal")
+elif bmi<30:
+    print("...over weight")
+else:
+    print("...obese")
+
+FILE : CH8SOL20
+
+x=float(input("enter value of x: "))
+n=int(input("enter value of n (for x**n): "))
+s=0
+for a in range (n+1):
+    s+=x**a
+print("sum of first",n,"terms :",s)
+
+
+
+
+FILE : CH8SOL21
+
+x=int(input("enter value of x: "))
+n=int(input("enter power of(n): "))
+s=0
+sign=+1
+for a in range(n+1):
+    term=(x**a)*sign
+    s+=term
+    sign*=-1
+print("sum of first", n, "terms: ",s)
+
+FILE : CH8SOL22
+
+x=int(input("enter value of x: "))
+n=int(input("enter power of(n): "))
+s=x
+sign=+1
+for a in range(2,n+1):
+    f=1
+    for i in range(2,a+1):
+        f*=i
+    term=((x**a)*sign)/f
+    s+=term
+    sign*=-1
+print("sum of first",n,"terms : ",s)
+
+FILE : CH8SOL23
+
+n=int(input("Enter number: "))
+summ=0
+for i in range(1,n):
+    if (n%i==0):
+        summ=summ+i
+if (summ==n):
+    print("the number ",n,"is a perfect number!")
+else:
+    print("the number",n,"is not a perfect number!")
+
+FILE : CH8SOL24
+
+num= int(input("enter 3 digit number:"))
+summ=0
+temp=num
+while (temp>0):
+    digit =temp%10
+    summ+=digit**3
+    temp//=10
+if (num==summ):
+    print(num,"is an armstrong number :")
+else:
+    print(num,"is not an armstrong number :")
+
+FILE : CH8SOL25
+
+num=int(input("enter number:"))
+wnum=num
+rev=0
+while(wnum>0):
+    dig=wnum%10
+    rev=rev*10+dig
+    wnum=wnum//10
+if (num==rev):
+    print("number",num,"is a palindrome!")
+else:
+    print("number",num,"is not a palindrome!")
+
+FILE : CH8SOL26
+t=int(input("enter many terms? (enter 2+ value) :"))
+first=0; second=1
+print("\nFibonacci series is : ")
+print(first,end=",")
+print(second,end=",")
+for i in range(2,t):
+    next =first+ second
+    print( end=",",next)
+    first= second
+    second=next
+    
+FILE : CH8SOL27A
+
+
+x=int(input("enter the number :"))
+y=int(input("enter the number :"))
+if x>y:
+    smaller=y
+else:
+    smaller=x
+for i in range(1,smaller+1):
+    if ((x%i==0)and(y%i==0)):
+        hcf=i
+lcm=(x*y)/hcf
+print("the H.C.F of",x,"and",y,"is",hcf)
+print("the L.C.M of",x,"and",y,"is",lcm)
+
+FILE : CH8SOL28
+
+sum=0
+n=int(input("how many terms?"))
+#added 2 to n becasuse started with 2
+for a in range(2,n+2):
+    t=0
+    for b in range (1,a):
+        t+=b
+    print("Term",(a-1),":",t)
+    sum+=t
+print("sum of",n,"term is", sum)
+
+FILE : CH8SOL29
+
+import random
+n=int(input("how many dice throws ?"))
+for i in range(1,n+1):
+    print("throw",i,":",random.randint(1,6))
+
+
+
+FILE : CH8SOL30
+
+n=1
+for a in range(5):
+    print(n)
+    n=n*10+1        #number generator
+
+FILE : CH8SOL31
+
+for i in range(4):
+    for j in range(4,i,-1):
+        print(j,end=" ")
+    else:
+        print()

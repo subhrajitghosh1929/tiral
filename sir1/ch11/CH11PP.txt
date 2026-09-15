@@ -1,0 +1,324 @@
+FILE : CH11PP1
+
+lst = [0,1]
+a = 0
+b = 1
+c = 0
+for i in range(7):
+    c = a + b
+    a = b
+    b = c
+    lst.append(c)
+print("9 terms of Fibonacci series are:", tuple(lst))
+
+
+#2
+print()
+print("#2")
+tup = ()
+a = 0
+b = 1
+c = 0
+tup=tup+(a,)
+tup=tup+(b,)
+for i in range(7):
+    c = a + b
+    a = b
+    b = c
+    tup=tup+(c,)
+print("9 terms of Fibonacci series are:", tup)
+
+
+
+
+
+
+
+
+
+
+FILE : CH11PP1A
+
+# Fibonacci series using 2 variable only 
+a = 0
+b = 1
+print(a,b,end=" ")
+for i in range(7):
+    b = a + b
+    print(b,end=" ")
+    a=b-a
+
+#2
+print()
+print("#2")
+a = 0
+b = 1
+lst=[a,b]
+for i in range(7):
+    b = a + b
+    lst.append(b)
+    a=b-a
+print("9 terms of Fibonacci series are:", lst)
+
+#3
+print()
+print("#3")
+a = 0
+b = 1
+lst=[a,b]
+for i in range(7):
+    b = a + b
+    lst.append(b)
+    a=b-a
+print("9 terms of Fibonacci series are:", tuple(lst))
+
+
+
+
+
+FILE : CH11PP2
+
+tup = eval(input("Enter the elements of tuple:"))
+b = int(eval(input("Enter the index value:")))
+c = len(tup)
+if b < c:
+    print("value of tuple at index", b ,"is:" ,tup[b])
+else:
+    print("Index is out of range")
+
+
+#2b
+term = int(input ("Enter Fibonacci Term: "))
+lst = [0,1]
+a = 0
+b = 1
+c = 0
+for i in range(term+1):
+    c = a + b
+    a = b
+    b = c
+    lst.append(c)
+tup=tuple(lst)
+print("Terms of Fibonacci series are:",tup)
+ele=eval(input("Enter the index value:"))
+print("index of ",ele,"is ",tup.index(ele))
+
+FILE : CH11PP2A
+
+lst = [0,1]
+a = 0;b = 1;c = 0
+for i in range(7):
+    c = a + b
+    a = b;b = c
+    lst.append(c)
+tup=tuple(lst)
+print("Terms of Fibonacci series are:",tup)
+ele=eval(input("Enter the index value:"))
+print("index of ",ele,"is ",tup.index(ele))
+
+FILE : CH11PP3
+
+n = eval(input("Enter the numbers: "))
+tup = tuple(n)
+print("Tuple is:", tup)
+print("Highest value in the tuple is:", max(tup))
+print("Lowest value in the tuple is:", min(tup))
+
+FILE : CH11PP4
+
+tup = ()
+ans = "y"
+while ans == "y" or ans == "Y" :
+      roll_num = int(input("Enter roll number of student: "))
+      name = input("Enter name of student: ")
+      marks = int(input("Enter marks of student: "))
+      tup += ((roll_num, name, marks),)
+      ans = input("Do you want to enter more marks? (y/n): ")
+print(tup)
+
+FILE : CH11PP5
+
+num_of_students = 5
+tup = ()
+for i in range(num_of_students):
+    print("Enter the marks of student", i + 1)
+    m1 = int(input("Enter marks in first subject: "))
+    m2 = int(input("Enter marks in second subject: "))
+    m3 = int(input("Enter marks in third subject: "))
+    tup = tup + ((m1, m2, m3),)
+    print()
+print("Nested tuple of student data is:", tup)
+
+
+
+
+
+
+
+FILE : CH11PP6
+
+num_of_students = 5
+tup = ()
+for i in range(num_of_students):
+    print("Enter the marks of student", i + 1)
+    m1 = int(input("Enter marks in first subject: "))
+    m2 = int(input("Enter marks in second subject: "))
+    m3 = int(input("Enter marks in third subject: "))
+    s=(m1,m2,m3)
+    tup = tup + (s,)
+    s1=sum(s)
+    print("total of student ",i," is ",s1)
+    print("average of student ",i," is ",s1/len(s))
+    print()
+print("Nested tuple of student data is:", tup)
+
+FILE : CH11PP6A
+
+num_of_students = 5
+tup = ()
+tup1=()
+for i in range(num_of_students):
+    print("Enter the marks of student", i + 1)
+    m1 = int(input("Enter marks in first subject: "))
+    m2 = int(input("Enter marks in second subject: "))
+    m3 = int(input("Enter marks in third subject: "))
+    s=(m1,m2,m3)
+    tup = tup + (s,)
+    s1=sum(s)
+    tup1+=(s1,)
+print()
+print("Nested tuple of student data is:", tup)
+print()
+for i in range(num_of_students):
+    print("total of student ",i," is ",tup1[i])
+    print("average of student ",i," is ",tup1[i]/len(s))
+    print()
+
+FILE : CH11PP6B
+
+num_of_students = 5
+tup = ()
+tup1=()
+for i in range(num_of_students):
+    print("Enter the marks of student", i + 1)
+    m1 = int(input("Enter marks in first subject: "))
+    m2 = int(input("Enter marks in second subject: "))
+    m3 = int(input("Enter marks in third subject: "))
+    s=(m1,m2,m3)
+    tup = tup + (s,)
+    s1=sum(s)
+    tup1+=(s1,)
+print()
+print("Nested tuple of student data is:", tup)
+print()
+for i in range(num_of_students):
+    print("elements of tuple ",i+1," ",tup[i])
+    print()
+print()
+for i in range(num_of_students):
+    print("total of student ",i," is ",tup1[i])
+    print("average of student ",i," is ",tup1[i]/len(s))
+    print()
+
+FILE : CH11PP7
+
+tup1 = eval(input("Enter the elements of first tuple: "))
+tup2 = eval(input("Enter the elements of second tuple: "))
+tup3 = tup1 + tup2
+print(tup3)
+
+
+
+
+
+
+FILE : CH11PP8
+
+tup = ()
+for i in range(1,51):
+    tup = tup + (i**2,)
+print("The square of integers from 1 to 50 is:" ,tup)
+
+#b
+print()
+tup = ()
+for i in range(1, 27):
+    tup = tup + (chr(i + 96)* i,)
+print(tup)
+
+FILE : CH11PP9
+
+tup = ()
+for i in range(1,51):
+    tup = tup + (i**2,)
+print("The square of integers from 1 to 50 is:" ,tup)
+
+#b
+print()
+tup = ()
+for i in range(1, 27):
+    tup = tup + (chr(i + 96)* i,)
+print(tup)
+
+FILE : CH11PP10
+
+tup = ((2,5),(4,2),(9,8),(12,10))
+count = 0
+tup_length = len(tup)
+for  i in range (tup_length):
+    if tup [i][0] % 2 == 0 and tup[i][1] % 2 == 0:
+        count = count + 1
+print("The number of pair where both a and b are even:", count)
+
+
+FILE : CH11PP11
+
+seq_a = eval(input("Enter the first tuple: "))
+seq_b = eval(input("Enter the second tuple: "))
+for i in seq_a:
+    if i not in seq_b:
+        print("False")
+        break
+else:
+    print("True")
+
+FILE : CH11PP12
+
+tup = eval(input ("Enter the numeric tuple: "))
+total = sum(tup)
+tup_length = len(tup)
+mean = total / tup_length
+print("Mean of tuple:", mean)
+
+FILE : CH11PP13
+
+tup = eval(input("Enter a tuple: "))
+maxCount = 0
+mode = 0
+for i in tup :
+      count = tup.count(i)
+      if maxCount <  count:
+            maxCount = count
+            mode = i
+
+print("mode:", mode)
+
+FILE : CH11PP14
+import statistics 
+tup = eval(input("Enter a tuple: "))
+tup_sum = sum(tup)
+tup_len = len(tup)
+print("Average of tuple element is:", tup_sum / tup_len)
+print("Mean of tuple element is:", statistics.mean(tup))
+
+FILE : CH11PP15
+
+tup1 = ((1, 2), (3, 4.15, 5.15), ( 7, 8, 12, 15))
+total_mean = 0
+tup1_len = len(tup1)
+for i in range(tup1_len):
+    mean = sum(tup1[i]) / len(tup1[i])
+    print("Mean element", i + 1, ":", mean)
+    total_mean = total_mean + mean
+print("Mean of means" ,total_mean / tup1_len)
+

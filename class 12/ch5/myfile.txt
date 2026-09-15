@@ -1,0 +1,4 @@
+Hello There 
+['This is Lagos \n', 'This is Python \n', 'This is Fcc \n']This is Lagos 
+This is Python 
+This is Fcc 

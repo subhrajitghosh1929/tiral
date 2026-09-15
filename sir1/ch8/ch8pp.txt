@@ -1,0 +1,428 @@
+FILE : CH8PP1
+len = float(input("Enter length in cm: "))
+if len < 0:
+    print("Invalid input")
+else:
+    inch = len / 2.54
+    print(len, "centimetres is equal to", inch, "inches")
+
+FILE : CH8PP2
+n = int(input("Enter number of items: "))
+cost = 0
+if n >= 100 :
+    cost = n * 70
+elif n >= 10 :
+    cost = n * 100
+else :
+    cost = n * 120
+print("Total Cost =", cost)
+
+FILE : CH8PP3
+hr = int(input("Enter hour between 1-12 : "))
+n = int(input("How many hours ahead : "))
+s = hr + n
+if s > 12:
+    s -= 12
+print("Time at that time would be : ", s, "O'clock")
+
+FILE : CH8PP4
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+d = 0
+if a > b :
+    d = a - b
+else : 
+    d = b - a
+if d <= 0.001 :
+    print("Close")
+else :
+    print("Not Close")
+
+FILE : CH8PP5
+
+year = int(input("Enter year: "))
+if year % 400 == 0 :
+    print(year, "is a Leap Year")
+elif year % 100 == 0 :
+    print(year, "is not a Leap Year")
+elif year % 4 == 0 :
+    print(year, "is a Leap Year")
+else :
+    print(year, "is not a Leap Year")
+
+FILE : CH8PP6
+
+a = int(input("Enter first side : "))
+b = int(input("Enter second side : "))
+c = int(input("Enter third side : "))
+if a + b > c and b + c > a and a + c > b :
+    print("Triangle Possible")
+else :
+    print("Triangle Not Possible")
+
+FILE : CH8PP7
+d = int(input("Enter a digit(0-9): "))
+if d == 0 :
+    print("Zero")
+elif d == 1 :
+    print("One")
+elif d == 2 :
+    print("Two")
+elif d == 3 :
+    print("Three")
+elif d == 4 :
+    print("Four")
+elif d == 5 :
+    print("Five")
+elif d == 6 :
+    print("Six")
+elif d == 7 :
+    print("Seven")
+elif d == 8 :
+    print("Eight")
+elif d == 9 :
+    print("Nine")
+else :
+    print("Invalid Digit")
+
+FILE : CH8PP8
+
+import math
+n = int(input("Enter a number: "))
+sr = math.sqrt(n);c = 0
+for i in range(1, int(sr + 1)) :
+    if (sr % i == 0) :
+        c += 1
+if c == 2 :
+    print("Square root is prime")
+else :
+    print("Square root is not prime")
+
+FILE : CH8PP9
+
+n = int(input("Enter n: "))
+x = n * 2 - 1
+for i in range(x, 0, -2) :
+    print(i)
+
+FILE : CH8PP10
+
+print("First Series:")
+for i in range(1, 41, 3) :
+    print(i, end = ' ')
+print("\nSecond Series:")
+x = 1
+for i in range(1, 41, 3) :
+    print(i * x, end = ' ')
+    x *= -1
+
+FILE : CH8PP11
+
+sum = count = 0
+print("Enter numbers")
+print("(Enter 'q' to see the average)")
+while True :
+    n = input()
+    if n == 'q' or n == 'Q' :
+        break
+    else :
+        sum += int(n)
+        count += 1
+avg = sum / count
+print("Average = ", avg)
+
+FILE : CH8PP12
+
+a = int(input("Enter first side : "))
+b = int(input("Enter second side : "))
+c = int(input("Enter third side : "))
+
+if a == b and b == c :
+    print("Equilateral Triangle")
+elif a == b or b == c or c == a:
+    print("Isosceles Triangle")
+else :
+    print("Scalene Triangle")
+
+FILE : CH8PP13
+
+a = int(input("Enter an integer: "))
+if a % 10 == 4 :
+    print("ends with 4")
+elif a % 10 == 8 :
+    print("ends with 8")
+else :
+    print("ends with neither")
+
+FILE : CH8PP14
+
+n = int(input("Enter a number greater than 20: "))
+if n <= 20 :
+    print("Invalid Input")
+else :
+    for i in range(11, n + 1) :
+        print(i)
+        if i % 3 == 0 and i % 7 == 0 :
+            print("TipsyTopsy")
+        elif i % 3 == 0 :
+            print("Tipsy")
+        elif i % 7 == 0 :
+            print("Topsy")
+
+FILE : CH8PP15
+
+print("Enter numbers:")
+print("(Enter 'q/Q' to see the result)")
+l = input()
+
+if l != 'q' and l != 'Q' :
+    l = int(l)
+    while True:		# creates an infinite loop
+        n = input()
+        if n == 'q' or n == 'Q' :
+            break
+        n = int(n)
+        if n > l :
+            l = n
+    print("Largest Number =", l)
+
+FILE : CH8PP16
+
+n = int(input("How many numbers you want to enter? "))
+if n > 1 :
+    l = int(input())   
+    sl = int(input())
+
+
+    if sl > l :
+        t = sl
+        sl = l
+        l = t
+    for i in range(n - 2) :
+        a = int(input())
+        if a > l :
+            sl = l
+            l = a
+        elif a > sl :
+            sl = a
+    print("Second Largest Number =", sl)
+else :
+    print("Please enter more than 1 number")
+
+FILE : CH8PP17
+
+print("Enter numbers:")
+while True :
+    n = input()
+    n = int(n)
+    t = n
+    r = 0
+    while (t != 0) :
+        d = t % 10
+        r = r * 10 + d
+        t = t // 10
+    if (n == r) :
+        print(n, "is a Palindrome Number")
+    else :
+        print(n, "is not a Palindrome Number")
+
+
+
+
+
+
+
+FILE : CH8PP18
+
+x = int(input("Enter an integer: "))
+temp = x
+count = 0
+digit = -1
+while temp != 0 :
+    digit = temp % 10
+    count += 1
+    temp = temp // 10
+y = count * 10 + digit
+print("Y =", y)
+
+FILE : CH8PP19
+
+m = int(input("Enter m: "))
+n = int(input("Enter n: "))
+for i in range(1, n) :
+    if i % m == 0 :
+        print(i, "is divisible by", m)
+        if i % 2 == 0 :
+            print(i, "is even")
+        else :
+            print(i, "is odd")
+
+FILE : CH8PP20A
+
+n = 2 
+d = 9 
+m = 1 
+sum = 0
+for i in range(7) :
+    t = n / d
+    sum += t * m
+    n += 3
+    d += 4
+    m *= -1
+print("Sum =", sum)
+
+FILE : CH8PP20B
+
+n = int(input("Enter the value of n: "))
+i = 1; sum = 0
+while i <= n :
+    sum += i ** 2
+    i += 2
+print("Sum =", sum)
+
+FILE : CH8PP21
+
+n = int(input("Enter the value of n: "))
+sum = 0
+for i in range(n + 1) :
+    fact = 1
+    for j in range(1, i) :
+        fact *= j
+    term = 1 / fact
+    sum += term
+print("Sum =", sum)
+
+FILE : CH8PP22
+
+n = int(input("Enter the value of n: "))
+g1=g2=g3=0
+for i in range(1, n + 1) :
+    age = int(input("Enter employee age: "))
+    
+    if 26 <= age <= 35 :
+        g1 += 1
+    elif 36 <= age <= 45 :
+        g2 += 1
+    elif 46 <= age <= 55 :
+        g3 += 1
+print("Employees in age group 26 - 35: ", g1)
+print("Employees in age group 36 - 45: ", g2)
+print("Employees in age group 46 - 55: ", g3)
+
+
+FILE : CH8PP23A
+n = int(input("Enter the value of n: "))
+g1=g2=g3=0
+for i in range(1, n + 1) :
+    age = int(input("Enter employee age: "))
+    if 26 <= age <= 35 :
+        g1 += 1
+    elif 36 <= age <= 45 :
+        g2 += 1
+    elif 46 <= age <= 55 :
+        g3 += 1
+print("Employees in age group 26 - 35: ", g1)
+print("Employees in age group 36 - 45: ", g2)
+print("Employees in age group 46 - 55: ", g3)
+
+FILE : CH8PP23B
+x = int(input("Enter the value of x: "))
+n = int(input("Enter the value of n: "));sum = 0
+for i in range(1, n + 1) :
+    term = x ** i / i
+    sum += term
+print("Sum =", sum)
+
+FILE : CH8PP24
+n=int(input("enter the N.O. of rows"))
+for i in range(0,n):
+    for j in range (0,i+1):
+        if j== 0 or j==i:
+            print("*",end="")
+        else:
+            print(" ",end="") 
+    print()
+for i in range(n,-1,-1):
+    for j in range(0,i+1):
+        if j== 0 or j==i:
+            print("*",end="")
+        else:
+            print(" ",end="")
+    print() 
+
+FILE : CH8PP25
+
+n=int(input("enter the no of rows :"))
+for i in range(str(65),str(n)):
+    for j in range(str(65),str(i)):
+        print(j,end="")
+    print() 
+
+FILE : CH8PP25C
+
+n=int(input("enter the N.O. of rows"))
+for i in range(0,n,2):
+    for j in range (0,i+1,2):
+        print(i,end=" ")
+    print()
+              
+FILE : CH8PP25D
+
+n=int(input("enter the N.O. of rows"))
+for i in range(2,n,2):
+    for j in range (2,i+1,2):
+        print(i,end=" ")
+    print()
+              
+FILE : CH8PP26
+
+n=int(input("enter the N.O. of rows"))
+for i in range(2,n,2):
+    for j in range (2,i+1,2):
+        print(i,end=" ")
+    print()
+
+FILE : CH8PP26A
+name="AABCDEF"
+for ch in range(0,len(name)) :
+    for a in range(0,int(ch)):    
+        print(name[ch],end='')
+    print()
+
+FILE : CH8PP27
+
+# to find the largest, middle and smallest among 3 numbers
+
+num1=float(input("Enter the 1st number: "))
+num2=float(input("Enter the 2nd number: "))
+num3=float(input("Enter the 3rd number: "))
+
+if (num1 > num2) and (num1 > num3):
+    largest=num1
+elif (num2 > num1) and (num2 > num3):
+    largest=num2
+else:
+    largest=num3
+
+
+if (num1 < num2) and (num1 < num3):
+    smallest=num1
+elif (num2 < num1) and (num2 < num3):
+    smallest=num2
+else:
+    smallest=num3
+
+
+if (num1 < largest) and (num1 > smallest):
+    mid=num1
+elif (num2 < largest) and (num2 > smallest):
+    mid=num2
+else:
+    mid=num3
+
+
+print("smallest among 3 numbers is : ",smallest)
+
+print("middle among 3 numbers is : ",mid)
+
+print("largest number is: ",largest)

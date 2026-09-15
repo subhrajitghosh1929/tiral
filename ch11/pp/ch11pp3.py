@@ -1,0 +1,5 @@
+n = eval(input("Enter the numbers: "))
+tup = tuple(n)
+print("Tuple is:", tup)
+print("Highest value in the tuple is:", max(tup))
+print("Lowest value in the tuple is:", min(tup))

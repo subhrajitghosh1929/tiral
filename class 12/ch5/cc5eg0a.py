@@ -1,0 +1,6 @@
+myfile=open(r'poem.txt',"r")
+str=myfile.read(30)
+print(str)
+str2=myfile.read(50)
+print(str2)
+myfile.close()

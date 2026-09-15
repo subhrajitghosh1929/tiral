@@ -1,0 +1,5 @@
+dna_seq=input('enter DNA string')
+Dseq=dna_seq.upper()
+print("Codon1",Dseq[0:3])
+print("Codon2",Dseq[3:6])
+print("Codon3",Dseq[6:9])

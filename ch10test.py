@@ -1,0 +1,16 @@
+t1=[1,3,5]
+print(t1)
+print(id(t1))
+print(id(t1.append(10)))
+print(t1)
+print(id(t1.extend([10,12])))
+print(t1)
+print(id(t1.append(10)))
+print(t1)
+t2=[2,4,6]
+print(t2)
+print(id(t2))
+print(id(t2.extend([10,12])))
+print(t2)
+print(id(t2.append(10)))
+print(t2)

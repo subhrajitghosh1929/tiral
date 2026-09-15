@@ -1,0 +1,10 @@
+x = int(input("Enter an integer: "))
+temp = x
+count = 0
+digit = -1
+while temp != 0 :
+    digit = temp % 10
+    count += 1
+    temp = temp // 10
+y = count * 10 + digit
+print("Y =", y)

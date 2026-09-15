@@ -1,0 +1,202 @@
+ FILE : CH10PP1
+
+lis=[13,18,11,16,18,14]
+print(lis)
+lis.append(12)
+print(lis)
+
+FILE : CH10PP2
+
+t2=['e','i','q','a','q','p']
+print (t2)
+t2.reverse()     # may also be written as t2.sort(reverse=False)
+print (t2)
+
+FILE : CH10PP3
+
+l1=[17,24,15,30,34,27]
+print("original list1:",l1)
+l2=[27,24,15,30,34,37]
+print("original list2: ",l2)
+l3=l1.copy()
+print("original list3:",l3)
+l3.extend(l2)
+print("copy of the list after change:",l3)
+
+FILE : CH10PP4
+
+lis=[1,2,3,4,5,6,7,8,9,10,11,12]
+print(lis)
+for i in range(len(lis)):
+    if lis[i]>10:
+        lis[i]=10
+print(lis)
+
+
+
+
+
+
+FILE : CH10PP5
+
+l1 = eval(input("Enter a list of strings: "))
+l2 = []
+for i in range(len(l1)):
+    l2.append(l1[i][1:])
+print("List after removing first characters:")
+print(l2)
+
+FILE : CH10PP6
+
+ln=eval(input("Enter a list : "))
+ele=eval(input("Enter the element to be searched : "))
+l=len(ln)
+#for i in range(l):
+print(ele is ln)
+if ele in ln  :
+    print("the element is present in the list : ")
+else:
+    print("the element is not present in the list : ")
+
+FILE : CH10PP6A
+
+l = eval(input("Enter list: "))
+n = int(input("Enter number to search: "))
+if n in l:
+    print(n, "found at index", l.index(n))
+else :
+    print(n, "not found in list")
+
+
+FILE : CH10PP7
+
+print("part A")
+lis=[]
+for i in range (50):
+    lis.append(i)
+print(lis)
+
+print("part B")
+lis1=[]    
+for i in range (1,51):
+    lis1.append(i*i)
+print(lis1)
+    
+print("part C")
+pattern=""
+lis2=[]
+for a in range(97,123):      # printing pattern using ASCII value
+    pattern=(chr(a))*(a-96)
+    lis2.append(pattern)
+print(lis2)
+
+FILE : CH10PP8
+
+l=eval(input("enter a list :"))
+m=eval(input("enter another list:"))
+n=[]
+if len(l)==len(m):
+    for i in range(len(l)):
+        n.append(l[i]+m[i])       
+print(n)
+
+FILE : CH10PP9
+
+ln=eval(input("enter the no. of  elements for both lists : "))
+lisA,lisB=[],[]
+for i in range(ln):
+    varA=eval(input("enter an element of list A : "))
+    lisA.append(varA)
+for i in range(ln-1):
+    lisB.append(lisA[i])
+lisB.insert(0,lisA[ln-1])
+print(lisA)
+print(lisB)
+
+
+
+FILE : CH10PP10
+
+ln=eval(input("enter the value of n : "))
+lisA=[]
+lisA.append(0)
+lisA.append(1)
+for i in range(2,ln):
+    lisA.append(lisA[i-2]+lisA[i-1])        ###
+print(lisA)
+print(lisA[i-2]+lisA[i-1])
+
+FILE : CH10PP11
+
+l = eval(input("Enter list of strings: "))
+largeIdx = 0
+largeLen = 0
+for i in range(len(l)):
+    length = len(l[i])
+    if length > largeLen:
+        largeLen = length
+        largeIdx = i
+print("Longest String:", l[largeIdx])
+
+FILE : CH10PP12
+
+ln=eval(input("enter the no. of  elements for both lists : "))
+num,denum,lis=[],[],[]
+for i in range(ln):
+    varA=eval(input("enter an element of list A : "))
+    varB=eval(input("enter an element of list B : "))
+    num.append(varA)
+    denum.append(varB)
+for i in range(ln):
+    lis.append(num[i]/denum[i])
+for i in range(ln):    
+    print(i,"\t",lis[i])    
+print("the minimum fraction in the list is ",min(lis)," at index ", lis.index(min(lis)))
+
+
+
+
+
+
+FILE : CH10PP13
+
+ln=eval(input("enter the no. of  elements for the list : "))
+lisA=[]
+lisB=[]
+for i in range(ln):
+    varA=eval(input("enter an element of list A : "))
+    lisA.append(varA)
+varB=eval(input("enter the lower index : "))
+varC=eval(input("enter the upper index : "))
+for i in range(varB,varC+1):
+    lisB.append(lisA[i])
+print(lisB)
+print("the maximum in the list in between index ",varB," and ",varC," is ",max(lisB))
+print("the minimum in the list in between index ",varB," and ",varC," is ",min(lisB))
+
+FILE : CH10PP14
+
+l1=[17,24,15,30,34,27]
+l2=l1.copy()
+print("original list ",l1)
+print("created copy of the list:",l2)
+l2[0]+=10
+l2[-1]+=10
+print("copy of the list after change:",l2)
+print("original list:",l1)
+
+FILE : CH10PP15
+
+ln=eval(input("enter the no. of  elements for both lists : "))
+lisA,lisB=[],[]
+for i in range(ln):
+    varA=eval(input("enter an element of list A : "))
+    varB=eval(input("enter an element of list B : "))
+    lisA.append(varA)
+    lisB.append(varB)
+for i in range(ln):
+    if lisA[i]!=lisB[i]:
+        print("the list differ at index ",i)
+        break    
+else:
+    print("the list does not differ ")

@@ -1,0 +1,6 @@
+val=eval(input("enter a list:"))
+print("the list is:",val)
+mx=max(val)
+mn=min(val)
+print("the maximum number in the list:",mx)
+print("the minimum number in the list:",mn)

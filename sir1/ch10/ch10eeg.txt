@@ -1,0 +1,403 @@
+FILE : CH10EG1
+
+L=['q','w','e','r','t','y']
+length=len(L)
+for a in range(length):
+    print("at index",a,"and",(a-length),"element:",L[a])
+    
+FILE : CH10EG1A
+#1
+print()
+print("#1")
+a=[10,12,14]
+a+="abc"            # list can be added to a string when it is a accumilator(+=)
+print(a)            ###** "abc" is treated as a list and not as a string
+
+#2
+print()
+print("#2")
+a=[10,12,14]
+#a=a+"abc"      list can't be added to a string
+print(a)
+
+#3
+print()
+print("#3")
+a=[10,12,14,20,22,24,30,32,34] 
+print(a[3:-3])
+
+#4
+print()
+print("#4")
+L=["one","two","three","four"]
+print(L)
+L[0:1]=[4,5]
+print(L)
+L[0:2]=[0,1]
+print(L)
+L[0:3]=[0,1]
+print(L)
+
+#5
+print()
+print("#5")
+L[0:-2]=[345]
+print(L)
+#6
+print()
+print("#6")
+a=[1,2,3]
+a1=[1,2,3]
+b=a
+a[1]=5
+print(a)
+print(b)
+a1[1]=5
+b=a1
+b=list(a1)
+print(b)
+
+FILE : CH10EG2
+lst=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+slc1=lst[5:15:2]
+slc2=lst[::4]
+sum=avg=0
+print("slice1")
+for a in slc1:
+    sum+=a
+    print(a,end='')
+print()
+print("sum of ele. of slice1:",sum)
+print("Slice2")
+sum=0
+for a in slc2:
+    sum+=a
+    print(a,end=' ')
+print("sum of ele. of slice2:",sum)
+avg=sum/len(slc2)
+print("average of ele. of slice2:",avg)
+
+FILE : CH10EG3
+
+l1=[17,24,15,30,34,27]
+l2=l1.copy()
+print("original list ",l1)
+print("created copy of the list:",l2)
+l2[0]+=10
+l2[-1]+=10
+print("copy of the list after change:",l2)
+print("original list:",l1)
+
+FILE : CH10EG3A
+
+#1
+print("#1")
+lis=[13,18,11,16,18,14]
+print(lis.index(18))
+print(lis.append(33))     # may be asked as output
+print(lis.index(33))
+lst=lis    # a list can't be transfer to another list
+lst=lis.append(12)
+print(lst)
+
+#2
+print("#2")
+t1=[1,3,5]
+t2=[7,8]
+t1.append(t2)
+t1.append(10)
+#t1.append(11,12)        # unable to append more than one item or element
+t1.extend([11,12])   # in order to add more than one item than they must be enter as a list 
+print (t1)          # use .extend([...])
+
+
+#3
+print("#3")
+t1.insert(2,33)     # SYNTAX   .insert(index,item)
+print (t1)
+t1.pop(2)           # SYNTAX   .pop(index) to delete an item at index pos
+print (t1)
+t1.remove(11)       # SYNTAX   .remove(item) to delete an item 
+print (t1)
+print(t1.count(18))     # may be asked as output
+
+t1.reverse()        # to reverse the entire list 
+print (t1)          # may be asked as output (items in a list with in a list)
+t2=['e','i','q','a','q','p']
+print (t2)
+t2.sort()           # may also be written as t2.sort(reverse=False)
+print (t2)          # by default increasing order
+
+t2.sort(reverse=True)
+print(t2)
+t2.sort(reverse=False)     # may be asked as output
+print(t2)
+print(max(t2))
+print(min(t2))FILE :
+t1=[1,3,5]
+print(sum(t1))         # add up all integers 
+sval=[17,24,15,30]
+rsval.sorted(val,reverse=True)   # may also be written as t2.sort(reverse=False)
+print (rsval)          # by default increasing order
+t1.clear()             # to clear the whole list
+print (t1)
+
+#4
+print("#4")
+l2=[[1,2,3],[5,6]]     # it is known as ragged
+print(l2)
+
+FILE : CH10EG4
+
+lst=[]
+r=int(input("how are rows?"))
+c=int(input("how are columbs ?"))
+for i in range(r):
+    row=[]
+    for j in range(c):
+        elem=int(input("Element in row "+str(i+1)+", col "+str(j+1)+": "))
+        row.append(elem)
+    lst.append(row)
+print("list created is:",lst)
+print("---------------------")
+print("list create is:")
+print("lst=[")
+for i in range(r):
+    print("\t[",end=" ")
+    for j in range(c):
+        print(lst[i][j],end=" ")
+    print("]")
+print("\t]")
+# difference between append and extend is that in append 
+
+FILE : CH10EG5
+
+#1
+print("#1")
+val=[17,24,15,30]
+print("The original list is : ",val)
+print()
+val.extend([34,27])
+print("The extended list is : ",val)
+
+
+
+
+
+#2
+#print("#2")
+print()
+c=int(input("How many elements to be added to the list ?"))
+for j in range(c):
+    elem=int(input("Element "+str(j+1)+": "))
+    val.extend([elem])
+print()
+print("The further extended list is : ",val)
+#3
+print("#3")
+print()
+c=int(input("How many elements to be added to the list ?"))
+for j in range(c):
+    pos=int(input("Enter element position : "))
+    ele=int(input("Enter the element to be inserted/added at position  "+str(pos)+": "))
+    val.insert(pos,ele)
+print()
+print("The changed list is : ",val)
+#4
+print("#4")
+print()
+c=int(input("How many elements to be deleted from the list ?"))
+for j in range(c):
+    pos=int(input("Enter element position : "))
+    val.pop(pos-j)
+print()
+print("The changed list is : ",val)
+print("the element at position 3 is ",val[3])
+#5
+print("#5")
+print()
+#d=int(input("How many elements to be deleted from the list ?"))
+d=int(input("Enter the element to be deleted : "))
+for j in range(len(val)):
+    if d==val[j]:
+        val.remove(d)      
+print("The changed list is : ",val)
+
+FILE : CH10EG6
+
+myl=[2,4,6]
+print("Existing list is :",myl)
+n=eval(input("enter a number or a list to be appended:"))
+if type(n)==type([]):
+    print("you have accepted a list element")
+    myl.extend(n)
+elif type(n)==type(1):      # 1 stands for int
+    print("you have accepted a int")
+    myl.append(n)
+else:
+    print(" Please enter either an integer or a list.")# for a SET    
+print("appended list is:",myl)
+
+FILE : CH10EG7
+
+val=[17,23,18,19]
+print("the list is:",val)
+while True:
+    print("main menue")
+    print("1.insert")
+    print("2.delete")
+    print("3.exit")
+    ch=int(input("Enter your choice1/2/3 "))
+    if ch==1:
+        item=int(input("Enter item "))
+        pos=int(input("insert at which position "))
+        index=pos-1
+        val.insert(index,item)
+        print("success! list now is: ",val)
+    elif ch==2:
+        print("delete menue ")
+        print("1.delete using value ")
+        print("2.delete using index ")
+        print("3.delete a sublist ")
+        dch=int(input("enter choice (1 or 2 or 3) "))
+        if dch==1:
+            item=int(input("enter item to be deleted : "))
+            val.remove(item)
+            print("list now is:",val)
+        elif dch==2:
+            index=int(input("Enter index of item to be deleted "))
+            val.pop(index)
+            print("list now is:",val)
+        elif dch==3:
+            l=int(input("Enter lower limit of list to be deleted "))
+            h=int(input("Enter upper limit of list to be deleted "))
+            del val[l:h]
+            print("list now is: ",val)
+        else:
+            print("valid choice are 1/2/3 only ")
+    elif ch==3:
+        break
+    else:
+        print("valid choice are 1/2/3 only")
+
+FILE : CH10EG8
+
+val=eval(input("enter a list: "))
+print("original list :",val)
+val=val*2
+print("Repicatrd list:",val)
+val.sort()
+print("sorting in ascending order :",val)
+val.sort(reverse=True)
+print("sorting in desending order :",val)
+
+
+
+
+
+
+FILE : CH10EG9
+
+lst=eval(input("enter list:"))
+length=len(lst)
+min_ele=lst[0]
+min_index=0
+for i in range(1,length):
+    if lst[i] < min_ele:
+        min_ele=lst[i]
+        min_index=i
+print("Given list is:",lst)
+print("the minimum element of the given list is:")
+print(min_ele,"at index",min_index)
+
+FILE : CH10EG10
+
+lst=eval(input("Enter a list:"))
+length=len(lst)
+mean=sum=0
+for i in range(0,length):
+    sum+=lst[i]
+mean=sum/length
+print("given list is:",lst)
+print("the mean of given list is :",mean)
+
+FILE : CH10EG11
+
+lst=eval(input("enter a list:"))
+length=len(lst)
+element=int(input("enter element to be searched for:"))
+for i in range(0,length):
+    if element == lst[i]:
+        print(element,"found at index",i)
+        break
+else:
+    print(element,"not found in given list")
+
+
+
+FILE : CH10EG12
+lst=eval(input("enter a list:"))
+length=len(lst)
+element=int(input("enter element to be searched for:"))
+count=0
+for i in range(0,length):
+    if element == lst[i]:
+        count+=1
+if count ==0:
+    print(element,"not found in given list")
+else:
+    print(element,"has frequency as",count,"in given list")
+        
+FILE : CH10EG13
+
+lst=eval(input("enter list: "))
+length=len(lst)
+uniq=[]
+dupl=[]
+count=i=0
+while i<length:
+    element=lst[i]
+    count=1
+    if element not in uniq and element not in dupl:
+        i+=1
+        for j in range(i,length):
+            if element==lst[j]:
+                count+=1
+        else:
+            print("element",element,"frequency:",count)
+            if count==1:
+                uniq.append(element)
+            else:
+                dupl.append(element)
+    else:
+        i+=1
+print("original list",lst)
+print("unique element list",uniq)
+print("duplicates element list",dupl)
+        
+FILE : CH10EG14
+
+lst=eval(input("Enter a list:"))
+ln=len(lst)
+mx=max(lst)
+ind=lst.index(mx)
+if ind<(ln/2):
+    print("The maximum element",mx,"lies in the 1st half")
+elif ind==(ln/2):
+    print("The maximum element",mx,"lies in the middle")
+else:
+    print("The maximum element",mx,"lies in the 2st half")
+    
+FILE : CH10EG15
+
+lst1=eval(input("Enter list1:"))
+lst2=eval(input("Enter list2:"))
+mx1=max(lst1)
+mx2=max(lst2)
+if mx1>=mx2:
+    print(mx1,"the maximum is a list1 at index",lst1.index(mx1))
+else:
+    print(mx2,"the maximum is a list2 at index",lst2.index(mx2))
+
+        
+

@@ -1,0 +1,131 @@
+FILE : CH10SOL1
+
+val=eval(input("enter a list:"))
+print("the list is:",val)
+mx=max(val)
+mn=min(val)
+print("the maximum number in the list:",mx)
+print("the minimum number in the list:",mn)
+
+FILE : CH10SOL2
+
+val=eval(input("enter a list:"))
+print("original list:",val)
+s=len(val)
+if s%2 !=0:
+    s=s-1
+for i in range(0,s,2):
+    #print(i,i+1)
+    val[i],val[i+1]=val[i+1],val[i]
+print("LIST after swapping:",val)
+
+FILE : CH10SOL3
+
+val=eval(input("enter a list:"))
+alist=[]
+s=len(val)
+for i in range(s):
+    num=val[i]
+    csum=0
+    while num:
+        dig=num%10
+        csum+=(dig*dig*dig)
+        num=num//10
+    if csum==val[i]:
+        alist.append(val[i])
+print("largest number(=sum of its digits):",max(alist))
+print("smallest number(=sum of its digits):",min(alist))
+
+
+FILE : CH10SOL4
+
+pos=0
+sum=0
+L=[67,153,311,96,370,4050,371,955,407]
+while pos<len(L):
+    sum=sum+L [pos]
+    pos=pos+1
+print(sum)
+
+FILE : CH10SOL4A
+
+pos=0
+sum=0
+L=[67,153,311,96,370,4050,371,955,407]
+while pos<len(L):
+    if L[pos]%2==1:
+        sum=sum+L[pos]
+    pos=pos+1
+print(sum)
+
+FILE : CH10SOL5
+
+listA=eval(input("enter a list1:"))
+listB=eval(input("enter a list2:"))
+len1=len(listA)
+len2=len(listB)
+for a in range(len1):
+    ele=listA[a]
+    if ele in listB:
+        print("overlapped")
+        break
+else:
+    print("separated")
+
+
+
+
+
+FILE : CH10SOL6
+
+lst=eval(input("enter list:"))
+length=len(lst)
+biggest=secondbiggest=lst[0]
+for i in range(1,length):
+    if lst[i]>biggest:
+        secondbiggest=biggest
+        biggest = lst[i]
+    elif lst[i] > secondbiggest:
+        secondbiggest =lst[i]
+print("largest number of the list:",biggest)
+print("2nd-largest number of the list:",secondbiggest)
+
+FILE : CH10SOL7
+
+lst=eval(input("Enter a list"))
+length=len(lst)
+end=length-1
+print("original list:",lst)
+i=0
+while(i<=end):
+    ele =lst[i]
+if ele==0:
+    for j in range (i,end):
+        lst[j]=lst[j+1]
+    else:
+        lst[end]=0
+        end-=1
+if lst[i]!=0:
+    i+=1
+print("zero shifted:",lst)
+
+
+
+
+
+
+
+FILE : CH10SOL8
+
+lst=eval(input("enter a list:"))
+item=int(input("enter element to be removed:"))
+c=lst.count(item)
+if c==0:
+    print(item,"not in list")
+else:
+    while c > 0:
+        i=lst.index(item)
+        lst.pop(i)
+        c=c-1
+print("list after removing",item,":",lst)
+

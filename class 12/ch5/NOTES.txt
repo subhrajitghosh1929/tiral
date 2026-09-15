@@ -1,0 +1,4 @@
+The file contains many sentences.
+This is a sample file.
+But need only sentences which have only 5 words.
+Another line with five words here.

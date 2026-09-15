@@ -1,0 +1,10 @@
+f=open('out.log','w')
+f.write("The output is \n")
+f.write("My"+"work-status"+"is")
+f.flush()
+s='Ok.'
+f.write(s)
+f.write('\n')
+f.write('Finally Over\n')
+f.flush()
+f.close()

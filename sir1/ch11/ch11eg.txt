@@ -1,0 +1,189 @@
+FILE : CH11EG1
+t=()            # it is an empty tuple 
+print(t)
+t=(3)           # it is an integer not a tuple  
+print(t)
+t=3,            # it is a tuple 
+print(t)
+t=(3,)          # it is also a tuple 
+print(t)
+
+#2
+print()
+print("#2")
+t1=tuple("hello")	# it is a tuple
+print(t1)
+
+#3
+print()
+print("#3")
+tuple=eval(input("enter a tuple to be added:"))
+print("Tuple you entered: ",tuple)
+
+FILE : CH11EG2
+
+t1=eval(input("Enter a intput for tuple 1 : "))
+t2=eval(input("Enter a intput for tuple 2 : "))
+t3=eval(input("Enter a intput for tuple 3 : "))
+print("Type of t1 : ",type(t1))
+print("Type of t2 :",type(t2))
+print("Type of t3 :",type(t3))
+t1=tuple(t1)
+t2=tuple(t2)
+t3=tuple(t3)
+print("Tuple1 ",t1)
+print("Tuple2 ",t2)
+print("Tuple3 ",t3)
+print("Type of t1 : ",type(t1))
+print("Type of t2 : ",type(t2))
+print("Type of t3 : ",type(t3))
+
+FILE : CH11EG3
+
+t1=tuple(eval(input("Enter a intput: ")))
+print("create tuple1 is:",t1)
+
+FILE : CH11EG4
+
+t1=eval(input("Enter a intput: "))
+print("type 1 : ",type(t1))
+
+FILE : CH11EG5
+
+t1=eval(input("Enter a intput: "))
+print(t1[0],t1[-1])
+print(t1[1],t1[-2])
+print(t1[2],t1[-3])
+print(t1[2-3]," = ",t1[-1])
+
+numbers=([1,2,3],[4,5,6])
+#numbers[1]=[1,2,0]
+numbers[0][2]=0
+print(numbers[0][2])
+print(numbers)
+
+FILE : CH11EG6
+
+T=('p','y','t','h','o','n')
+print(type(T))
+for a in T :
+    print(T[a])
+
+FILE : CH11EG7
+
+T=('Hello','Isnt','python','fun','?')
+length=len(T)
+for a in range(length):
+    print("at index ",a,"and",(a-length),"element:",T[a])
+
+FILE : CH11EG8
+
+tp11=(1,3,5)
+tp12=(6,7,8)
+print(tp11+tp12)
+print(tp11+(3,))
+print(tp11*3)
+
+FILE : CH11EG9
+
+tup=eval(input("enter input for tuple: "))
+t=tup[3:-3]
+t0=tup[3:tup[5]]
+t1=tup[::-3]
+t2=tup[2:8:2]
+t3=tup[3:30]
+print("two created tuple are:")
+print("Tuple:",t)
+print("Tuple0:",t0)
+print("Tuple1:",t1)
+print("Tuple2:",t2)
+print("Tuple3:",t3)
+print(tup[2:5]*3)
+print(tup[2:5]+(3,4))
+
+FILE : CH11EG10
+
+tup=eval(input("enter input for tuple: "))
+t1=tup[2:8:2]
+t2=tup[-3:-9:-2]
+print("two created tuple are:")
+print("Tuple1:",t1)
+print("Tuple2:",t2)
+
+
+
+
+
+
+FILE : CH11EG11
+tup=eval(input("enter input for tuple: "))
+t1=tup[2:8:2]
+t2=tup[-3:-9:-2]
+t3=t2[::-1]
+if t3==t1:
+    print("the two tuple contain the same element in reverse order.")
+else:
+    print("the two tuple contain different element.")
+
+FILE : CH11EG12
+
+tup=eval(input("enter a 4 element tuple:"))
+a,b,c,d=tup
+print("tuple unpacked in ",a,b,c,d)
+tup=c,d,a,b
+print("Tuple after swapping the element:",tup)
+
+FILE : CH11EG13
+
+tup=eval(input("enter a tuple: "))
+mn=min(tup)
+ma=max(tup)
+print("minimum element",mn,"is at index ",tup.index(mn))
+print("minimum element",ma,"is at index ",tup.index(ma))
+print("sum of elements of tuple(tup)",sum(tup))
+
+FILE : CH11EG14
+
+tup=eval(input("Enter a tuple: "))
+ln=len(tup)
+num=tup.count(tup[0])    # counts the no. of times a particular element 
+print(num)              #  is present in the tuple 'tup' 
+if num==ln:
+    print("Tuple contains all the same element ")
+else:
+    print("Tuple contains different element")
+
+FILE : CH11EG15
+
+print("To print an empty tuple" ,tuple())
+print("To print a tuple" ,tuple("abc"))
+print("To print a tuple from a list: " ,tuple([1,2,3]))
+print("To print a tuple from a dictionaty: " ,tuple({1:"1",2:"2",3:"3"}))
+print("To print a list from a tuple of a list : " ,list[tuple([1,2,3])])  # list converted to tuple using tuple object
+                                                                          # and back again to list using list object 
+t1=eval(input("Enter a tuple: "))
+lst=sorted(t1)
+t1=tuple(lst)
+print("Tuple after sorting:",t1)
+
+FILE : CH11EG16
+
+t1=(11,21,31,42,51)
+tl1=list(t1)
+tl1[-2]=41
+t1=tuple(tl1)
+print("modified tuple: ",t1)
+
+FILE : CH11EG17
+
+student=(11,'Rai',(67,77,78,82,80))
+print("minimum marks obtained:",min(student[2]))
+print("maximum marks obtained:",max(student[2]))
+print("total marks obtained:",sum(student[2]))
+
+FILE : CH11EG18
+
+student=(11,'Ria',(66,77,78,82,80))
+print("minimum marks obtains",min(student[2]))
+print("maximum marks obtains",max(student[2]))
+print("total marks obtains",sum(student[2]))

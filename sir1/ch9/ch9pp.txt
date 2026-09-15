@@ -1,0 +1,260 @@
+FILE : CH9PP1
+
+str = input("Enter the string: ")
+ch = input("Enter the character to count: ");
+c = str.count(ch)
+print(ch, "occurs", c, "times")
+
+FILE : CH9PP2
+
+str = input("Enter the string: ")
+newStr = ""
+for ch in str : 
+    lch = ch.lower()
+    if lch in 'aeiou':
+        newStr += '*'
+    else :
+        newStr += ch
+print(newStr)
+
+FILE : CH9PP3
+
+str = input("Enter the string: ")
+newStr = ""
+for ch in str :
+    newStr = ch + newStr
+print(newStr)
+
+FILE : CH9PP3A
+
+str = input("Enter the string: ")
+for ch in range(len(str)-1,-1,-1) :
+    print(str[ch],end='')
+
+
+
+
+
+
+
+FILE : CH9PP4
+phNo = input("Enter the phone number: ")
+length = len(phNo)
+if length == 12 \
+    and phNo[3] == "-" \
+    and phNo[7] == "-" \
+    and phNo[:3].isdigit() \
+    and phNo[4:7].isdigit() \
+    and phNo[8:].isdigit() :
+    print("Valid Phone Number")
+else :
+    print("Invalid Phone Number")
+
+FILE : CH9PP5
+str = input("Enter the string: "); sum = 0; digitStr = ''
+for ch in str :
+    if ch.isdigit() :
+        digitStr += ch
+        sum += int(ch)
+if not digitStr :
+    print(str, "has no digits")
+else :
+    print(str, "has the digits", digitStr, "which sum to", sum)
+
+FILE : CH9PP6
+str = input("Enter a few sentences: "); length = len(str); spaceCount = 0
+alnumCount = 0
+for ch in str :
+    if ch.isspace() :
+        spaceCount += 1
+    elif ch.isalnum() :
+        alnumCount += 1
+alnumPercent = alnumCount / length * 100
+print("Original Sentences:")
+print(str)
+print("Number of words =", (spaceCount + 1))
+print("Number of characters =", (length))
+print("Alphanumeric Percentage =", alnumPercent)
+FILE : CH9PP7
+while True :
+    str = input("Please enter a sentence, or 'q' to quit : ")
+    newStr = ""
+    if str.lower() == "q" :
+        break
+    for ch in str :
+        if ch.islower() :
+            newStr += ch.upper()
+        elif ch.isupper() :
+            newStr += ch.lower()
+        else :
+            newStr += ch
+    print(newStr)
+
+FILE : CH9PP8
+num = int(input("Enter an integer: "))
+str = input("Enter the string: ")
+digitsStr = ''
+digitsNum = 0;
+for ch in str :
+    if ch.isdigit() :
+        digitsStr += ch
+if digitsStr :
+    digitsNum = int(digitsStr)
+print(num, "+", digitsNum, "=", (num + digitsNum))
+
+FILE : CH9PP9
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+small = str1; large = str2
+if len(str1) > len(str2) :
+    large = str1
+    small = str2
+print(small)
+lenLarge = len(large)
+for i in range(lenLarge // 2) :
+    print(' ' * i, large[i], ' ' * (lenLarge - 2 * i), large[lenLarge - i - 1], sep='')
+
+FILE : CH9PP10
+
+# printing of roman no
+n = int(input("Enter the number: "))
+num = (1000, 900,  500, 400, 100,  90, 50,  40, 10,  9,   5,  4,   1)
+rom = ('M',  'CM', 'D', 'CD','C', 'XC','L','XL','X','IX','V','IV','I')
+result = ''
+for i in range(len(num)) :
+    count = int(n / num[i])
+    result += str(rom[i] * count)
+    n -= num[i] * count
+print(result)
+
+FILE : CH9PP10A
+
+# printing of roman no
+n=int(input("Enter the number: "))
+num=(1000,900,500,400,100,90,50,40,10,9,5,4,1)
+rom=('M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I')
+result=''
+for i in range(len(num)) :
+    count = int(n / num[i])
+    result += str(rom[i] * count)
+    n -= num[i] * count
+print(result.lower())
+
+FILE : CH9PP11
+
+# to count the No. of words in a string(sentence) 
+str = input("Enter a string: ")
+count = 0
+for ch in str :
+    if ch.isspace() :
+        count += 1
+print("No of words =", count)
+
+FILE : CH9PP12
+
+# to check equality of opening and closing () in a formula
+str = input("Enter a formula: ")
+count = 0
+for ch in str :
+    if ch == '(' :
+        count += 1
+    elif ch == ')' :
+        count -= 1
+if count == 0 :
+    print("Formula has same number of opening and closing parentheses")
+else :
+    print("Formula has unequal number of opening and closing parentheses")
+
+# rectify the Error 
+
+
+FILE : CH9PP13
+
+str = input("Enter a string: ").lower()
+count = 0
+for ch in str : 
+    if ch in "aeiou":
+       count += 1
+print("Vowel Count =", count)
+
+FILE : CH9PP13A
+
+str = input("Enter a string: ").lower()
+count = 0
+for ch in str : 
+    if ch in "aeiou":
+       count += 1
+print("Vowel Count =", count)
+
+
+FILE : CH9PP13B
+
+# to display a string without the vowels 
+str = input("Enter a string: ").lower()
+for ch in str : 
+    if ch not in "aeiou":
+        print(ch,end="")
+
+FILE : CH9PP13C
+
+str = input("Enter a string: ").lower()
+for ch in str : 
+    if ch in "aeiou":
+       print(ch.upper(),end="")
+    else:
+        print(ch,end="")
+
+FILE : CH9PP14
+
+# to find the longest word in a string(sentence)
+str = input("Enter a string: ")
+words = str.split()
+longWord = ''
+for w in words :
+    if len(w) > len(longWord) :
+        longWord = w
+print("Longest Word =", longWord)
+
+FILE : CH9PP15
+
+str = input("Enter a string: ")
+words = str.split()
+newStr = ""
+for w in words :
+    rw = ""
+    for ch in w :
+        rw = ch + rw
+    newStr += rw + " "
+print(newStr)
+
+FILE : CH9PP15A
+
+str = input("Enter a string: ")
+words = str.split()
+for w in words :
+    rw = ""
+    for ch in w :
+        rw = ch + rw
+    print(rw,end=" ")
+
+FILE : CH9PP15B
+
+str = input("Enter a string: ")+" "
+rw =""
+for w in str :
+    if w==" " : 
+        print(rw,end=" ")
+        rw = ""
+    else:
+        rw = w + rw
+
+FILE : CH9PP15C
+
+str = input("Enter a string: ")+" "
+rw=""
+for w in range(len(str)):
+    if str[w]==" " : 
+        print(rw,end=" ")
+        rw=""
+    else:
+        rw=str[w]+rw

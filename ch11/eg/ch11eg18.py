@@ -1,0 +1,11 @@
+student=(11,22,(66,77,78,82,80))
+print("minimum marks obtains",min(student[2]))
+print("maximum marks obtains",max(student[2]))
+print("total marks obtains",sum(student[2]))
+print("total marks obtains",len(student))
+t2=sorted(student)
+print(t2)
+print("minimum marks obtains",min(student))
+print("maximum marks obtains",max(student))
+print("total marks obtains",sum(student))
+

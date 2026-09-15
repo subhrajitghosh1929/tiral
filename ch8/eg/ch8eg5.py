@@ -1,0 +1,31 @@
+print("enter five number below")
+num1=float(input("first number:"))
+num2=float(input("second number:"))
+num3=float(input("third number:"))
+num4=float(input("fourth number:"))
+num5=float(input("fifth number:"))
+divisor=float(input("enter the divisor number:"))
+count=0
+print("multiple of", divisor,"are:")
+remainder=num1%divisor
+if remainder==0:
+    print(num1,sep=" ")
+    count+=1
+remainder=num2%divisor
+if remainder==0:
+    print(num2,sep=" ")
+    count+=1
+remainder=num3%divisor
+if remainder==0:
+    print(num3,sep=" ")
+    count+=1
+remainder=num4%divisor
+if remainder==0:
+    print(num4,sep=" ")
+    count+=1
+remainder=num5%divisor
+if remainder==0:
+    print(num5,sep=" ")
+    count+=1
+print()
+print(count,"multiples of",divisor,"found")

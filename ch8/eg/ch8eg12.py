@@ -1,0 +1,5 @@
+print(3 in [1,2,3,4])
+print(5 in [1,2,3,4])
+print(5 not in [1,2,3,4])
+print('a'in "trade")
+print('ash'in "trash")

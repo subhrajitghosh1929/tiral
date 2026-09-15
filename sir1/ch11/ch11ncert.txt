@@ -1,0 +1,208 @@
+FILE : CH11NCERT1
+
+T=(23,45,34,66,77,67,70)
+maxvalue=max(T)
+length=len(T)
+secmax=0
+for a in range(length):
+    if secmax < T[a] < maxvalue:
+        secmax=T[a]
+print("second Largest value is:",secmax)
+
+FILE : CH11NCERT1A
+
+T=(23,45,34,66,77,67,70)
+maxvalue=max(T)
+length=len(T)
+secmax=0
+thmax=0
+for a in range(length):
+    if secmax < T[a] < maxvalue:
+        secmax=T[a]
+for a in range(length):
+    if  thmax < T[a] < secmax :
+        thmax=T[a]
+print("Largest value is:",maxvalue)
+print("second Largest value is:",secmax)
+print("third Largest value is:",thmax)
+
+
+
+
+
+
+
+
+
+
+
+
+FILE : CH11NCERT1B
+
+T=(23,45,34,66,77,67,70)
+maxvalue=max(T)
+length=len(T)
+secmax=0
+thmax=0
+fomax=0
+for a in range(length):
+    if secmax < T[a] < maxvalue:
+        secmax=T[a]
+for a in range(length):
+    if  thmax < T[a] < secmax :
+        thmax=T[a]
+for a in range(length):
+    if  fomax < T[a] < thmax :
+        fomax=T[a]
+print("Largest value is:",maxvalue)
+print("second Largest value is:",secmax)
+print("third Largest value is:",thmax)
+print("fourth Largest value is:",fomax)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FILE : CH11NCERT1C
+
+T=(23,45,34,66,77,67,70)
+maxvalue=max(T)
+length=len(T)
+secmax=0
+thmax=0
+fomax=0
+thtmax=0
+for a in range(length):
+    if secmax < T[a] < maxvalue:
+        secmax=T[a]
+for a in range(length):
+    if  thmax < T[a] < secmax :
+        thmax=T[a]
+for a in range(length):
+    if  fomax < T[a] < thmax :
+        fomax=T[a]
+print("Largest value is:",maxvalue)
+print("second Largest value is:",secmax)
+print("third Largest value is:",thmax)
+print("fourth Largest value is:",fomax)
+
+for a in range(length):
+    if  thtmax < T[a] < secmax < maxvalue :
+        thtmax=T[a]
+print()
+print("third Largest value is:",thtmax)
+#if thtmax < T[a] < secmax < maxvalue:
+    
+FILE : CH11NCERT2
+
+for n in range(5):
+    x=int(input("Enter a number"))
+    T=(x,x**2,x**3,x**4)
+    for m in range(4):
+        print(x,"rised to power ",m+1," is ",T[m])
+
+
+FILE : CH11NCERT3
+
+tup=eval(input("Enter tuple :"))
+mx= max(tup)
+if tup.count(mx)>1:
+    print("contains multiple maximum element")
+else:
+    print("contains only one maximum element")
+
+FILE : CH11NCERT4
+
+# to check if there duplicate elements in  tuple or not 
+tup=eval(input("enter a tuple :"))
+for el in tup:
+    if tup.count(el)>1:
+        print("contains duplicate elements")
+        break
+else:
+    print("does not contain duplicate elements")
+
+FILE : CH11NCERT5
+
+tup=eval(input("enter tuple :"))
+ln=len(tup)
+lies =False
+mn=min(tup)
+if ln%2 == 0:
+    half=ln//2
+    if mn == tup[half] or mn == tup[half-1]:
+        lies=True
+else:
+    half=ln//2
+    if mn == tup[half]:
+        lies = True
+if lies == True:
+    print("Minimum lies at tuple middle")
+else:
+    print("Minimum dosen't lie at tuple middle")
+
+FILE : CH11NCERT6
+
+tup=eval(input("Enter a tuple :"))
+ln=len(tup)
+mid=ln//2
+if ln%2 ==1:
+    mid=mid+1
+half =tup[:mid]
+if sorted(half)==list(tup[:mid]):
+    print("First half is sorted")
+else:
+     print("First half is not sorted")
+
+FILE : CH11NCERT7
+
+tup=eval(input("enter a tuple :"))
+if sorted (tup,reverse =True)==list(tup):
+    print("tuple is sorted is descreding order")
+else:
+    print("tuple is not sorted is descreding order")
+
+FILE : CH11NCERT8
+
+lst =[];	n=int(input("how many student?"))
+for i in range(1, n+1):
+    email = input("Enter email id of student" + str(1) +"; ")
+    lst.append(email)
+    etuple=tuple(lst)
+lst1=[];	lst2=[]		# NOTE MULTILINE
+for i in range(n) :
+    email = etuple[i].split("@")
+    lst1.append(email[0])
+    lst2.append(email[1])
+    unameTup=tuple(lst1)
+    dnameTup=tuple(lst2)
+print("Student all",etuple );print()    # Note the method of writing multiline in a single line
+print("user name tuple :",unameTup);print()
+print("Domain name tuple",dnameTup);print()
+
+FILE : CH11NCERT9
+
+lst=[]
+n=int(input("How many student?"))
+for i in range(1, n+1):
+    name=input("Enter name of student "+str(1)+":")
+    lst.append(name)
+ntuple=tuple(lst)
+nm=input("Enter name to be search for :")
+if nm in ntuple:
+    print(nm, "exist in the tuple")
+else:
+    print(nm, "does not exist in the tuple")

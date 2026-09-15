@@ -1,0 +1,293 @@
+FILE : CH9EG
+
+print(len("hello"))
+name="subhrajit"
+print(len(name))
+print('true'.capitalize())
+print("abracadabra".count('ab'))        # counts no. of times ab is present in the string
+print("abracadabra".count('ab',4,8))    # counts no. of times ab is present in the string within 4th to 8th character
+print("abracadabra".count('ab',6))      # counts no. of times ab is present in the string from 6th character onwards
+string='it gose as - ringa ringa'
+sub='ringa'
+print(string.find(sub))
+print(string.find(sub,15,25))
+print("abracadabra".index('ab')) 
+print("abracadabra".index('ab',6))
+#print("abracadabra".index('ab',4,8))       #as the sub string is not in the string hence error
+string="abc123"
+string2="hello"
+string3="12345"
+string4=" "
+print(string.isalnum())
+print(string2.isalnum())
+print(string3.isalnum())
+print(string4.isalnum())
+print()
+print(string.isalpha())
+print(string2.isalpha())
+print(string3.isalpha())
+print(string4.isalpha())
+print(string.isdigit())
+print(string2.isdigit())
+print(string3.isdigit())
+print(string4.isdigit())
+string="hello"
+string2="THERE"
+string3="GOLDY"
+print(string.islower())
+print(string2.islower())
+print(string3.islower())
+string="   "
+string2=""
+print(string.isspace())
+print(string2.isspace())
+string="HELLO"
+string2="There"
+string3="goldy"
+string4="U123"
+string5="123f"
+print(string.isupper())
+print(string2.isupper())
+print(string3.isupper())
+print(string4.isupper())
+print(string5.isupper())
+string="HELLO"
+string2="There"
+string3="goldy"
+string4="U123"
+string5="123f"
+print(string.lower())
+print(string2.lower())
+print(string3.lower())
+print(string4.lower())
+print(string5.lower())
+print(string.upper())
+print(string2.upper())
+print(string3.upper())
+print(string4.upper())
+print(string5.upper())
+print(" Sipo ".lstrip())
+print(" Sipo ".rstrip()+'#')
+print(" Sipo ".strip()+'#')
+print()
+print("abcd".startswith("cd"))
+print("abcd".startswith("ab"))
+print("abcd".endswith("b"))
+print("abcd".endswith("cd"))
+print("the sipo app".title())
+print("COMPUTER SCINCE".title())
+print("COMPUTER SCINCE".istitle())
+print("Computer Scince".istitle())
+print("abracadabra".replace('ab','sp'))
+print("i work for you".replace('you','u'))
+print("i work for you".replace('work','care'))
+print("*".join("hello"))
+print("***".join("hello"))
+print("$$".join(["trial","hello"]))
+print("$$".join(("trial","hello","new")))
+#print("$$".join((123,"hello","new")))      # all three items in the argument must be string
+print("I Love python".split())
+print("I Love python".split(" "))
+print("I Love python".split("o"))       #the string is divided from positions containing "o"
+txt="I enjoy working in Python"      #it return a tuple with 3 elements
+x=txt.partition("working")      #the string working acts as a seperator    
+print(x)            # 1st element before seperstor
+                    # 2nd element seperstor
+                    # 3rd element after seperstor
+
+FILE : CH9EG1
+name="superb"
+for ch in name :
+    print(ch,end='')
+    print('-',end='')
+
+FILE : CH9EG2
+string1=input("enter a string:")
+print("the",string1,"in reverse order is:")
+length=len(string1)
+for a in range(-1,(-length-1 ),-1):
+    print(string1 [a])
+
+FILE : CH9EG3
+
+string1=input("enter string:")
+length=len(string1)
+i=0
+for a in range(-1,(-length-1 ),-1):
+    print(string1[i],"\t",string1[a])
+    i+=1
+
+FILE : CH9EG4
+
+n=int(input("enter number:"))
+s=str(n)
+if '0'in s:
+    print("there's a 0(zero) in ",n)
+else:
+    print("no 0(zero) in ",n)
+print()    
+print("a"!="abc")
+print()  
+print(ord('A'))
+
+FILE : CH9EG5
+print('='*30)
+print('\n'*-5)       # by default for any value<1 It will leave 1(one) blank line
+# for any value other than 1(one) there will be one more blank line than the no. specified(given) 
+print('\n'*2)       # hence there will be four blank line
+print('='*30)
+
+FILE : CH9EG6
+uname=input("enter used name:")
+pcode=input("enter code: ")
+if uname not in pcode and pcode=='Trident111' :
+    print("your code is valid to proceed")
+else:
+    print("your code is invalid ")
+
+FILE : CH9EG7
+string='#'; pattern=""
+for a in range(5):
+    pattern+=string
+    print(pattern)
+print()
+print('#2')
+string='ABCDE'
+pattern=""
+for a in range(5):
+    pattern+=string[a]+' '
+    print(pattern)
+print()
+print('#3')
+string='A B C D E'
+pattern=""
+for a in range(9):      # practice for output 
+    print(string[:a])
+print()
+print('#3A')
+for a in range(65,71):      # printing pattern using ASCII value
+    pattern+=chr(a)+' '
+    print(pattern)
+print()
+print('#3B')
+string='A B C D E'
+for a in range(0,9,2):      #  printing pattern using string
+    for b in range(a):      #  printing pattern using nested loop
+        print(string[b],end="")     # prints the character at the position b  
+    print()
+print()
+print('#4')
+string='ABCDE'
+pattern=""
+for a in range(5):
+    pattern=(string[a]+' ')*(a+1)
+    print(pattern)
+print()
+print('#5')
+string='ABCDE'
+pattern=""
+for a in range(5):
+    pattern=(string[a]*(a+1)+'#')
+    print(pattern)
+print()
+print('#7')
+word='amazing'
+print('1:  '+word[0:7])
+print('2:  '+word[0:3])
+print('3:  '+word[2:5])
+print('4:  '+word[-7:-3])
+print('5:  '+word[-5:-1])
+print('6:  '+word[:7])
+print('7:  '+word[:5])
+print('8:  '+word[3:])
+print('9:  '+word[5:])
+print('10:  '+word[3:],word[:3])
+print('11:  '+word[3:]+word[:3])
+print('12:  '+word[-7:],word[:-7])
+print('13:  '+word[-7:]+word[:-7])
+print('14:  '+word[1:6:2])      # word[] starting:ending+1:step(increament/decreament)
+print('15:  '+word[-7:-3:3])      # word[] starting:ending+1:step(increament/decreament)
+print('16:  '+word[::])     # by default starting value=0:ending value=len of string:step value=positive 1
+print('17:  '+word[:])      # same as above(16)
+print('18:  '+word[6])          # will print only the (6+1)th character
+print()
+print('#8')
+print(ord('A'))    # ord('string(CHAR) value') gives the ASCII/unicode value of a string(SINGLR CHARACTER)
+print(chr(65))      # chr(ASCII value)  gives the CHARACTER of the corrosponding ASCII/unicode value
+
+FILE : CH9EG8
+s1=input("enter string1: ")
+s2=input("enter string2: ")
+print("original string:",s1,s2)
+if s1 in s2:
+    s3=s2[0:4]+"restore"
+print("final string:",s1,s3)
+
+FILE : CH9EG9
+s=input("enter string: ")
+if (s==s[::-1]):
+    print(s,"is palindrome")
+else:
+    print(s,"is not palindrome")
+ 
+FILE : CH9EG10
+line=input("Enter a line:"); lowercount=uppercount=0
+digitcount=alphacount=symcount=0
+for a in line :
+    if a.islower():
+        lowercount+=1
+    elif a.isupper():
+        uppercount+=1
+    elif a.isdigit():
+        digitcount+=1
+    elif a.isalpha():       # error needs to be checked
+        alphacountt+=1
+    elif a.isalnum()!= True and a != ' ':        # for counting specila character 
+        symcount+=1
+    elif a.isalnum() == False and a != ' ':        # for counting specila character 
+        symcount+=1
+print("Number of uppercase letters: ",uppercount)
+print("Number of lowercase letters: ",lowercount)
+print("Number of alphabets: ",alphacount)
+print("Number of digit: ",digitcount)
+print("Number of symbol: ",symcount)
+print("Number of symbol: ",symcount)  
+
+FILE : CH9EG11
+line=input("enter line :")
+sub=input("enter substring:")
+length=len(line)
+lensub=len(sub)
+start=count=0
+end=length
+while True:
+    pos=line.find(sub,start,end)
+    if pos!=-1:
+        count+=1
+        start=pos+lensub
+    else:
+        break
+    if start>=length:
+        break
+print("no. of occurrence of",sub,':',count)
+
+FILE : CH9EG12
+s=input('Enter a string(a decimal number):')
+t=s.partition('.')
+print("given string:",s)
+print("part after decimal",t[2])
+
+FILE : CH9EG13
+print("Enter word of your school motto,one by one")
+w1=input("Enter word1:")
+w2=input("Enter word2:")
+w3=input("Enter word3:")
+w4=input("Enter word4:")
+motto=" ".join([w1,w2,w3,w4])
+print("Enter your school's foundation day")
+dd=input("Enter dd:")
+mm=input("Enter mm:")
+yyyy=input("enter yyyy")
+dt="/".join([dd,mm,yyyy])
+print("School motto:",motto)
+print("School foundation date:",dt)
